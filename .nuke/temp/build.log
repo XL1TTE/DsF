@@ -1,0 +1,104 @@
+18:18:54.357 | V |                      | ArgumentsFromParametersFile.OnBuildCreated (150)
+18:18:54.395 | V |                      | HandleReSharperSurrogateArguments.OnBuildCreated (150)
+18:18:54.396 | V |                      | InjectParameterValues.OnBuildCreated (100)
+18:18:54.436 | V |                      | HandleShellCompletion.OnBuildCreated (75)
+18:18:55.006 | V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
+18:18:55.007 | V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
+18:18:55.025 | V |                      | UpdateNotification.OnBuildCreated (10)
+18:18:55.025 | V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
+18:18:55.026 | V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
+18:18:55.030 | V |                      | EventInvoker.OnBuildCreated (-3.4028235E+38)
+18:18:55.049 | V |                      | HandlePlanRequests.OnBuildInitialized (10)
+18:18:55.049 | V |                      | HandleHelpRequests.OnBuildInitialized (5)
+18:18:55.049 | V |                      | Telemetry.OnBuildInitialized (0)
+18:18:56.083 | V |                      | Sending BuildStarted telemetry event ...
+18:18:56.085 | V |                      |   build_components         = 
+18:18:56.085 | V |                      |   build_type               = Project
+18:18:56.085 | V |                      |   compile_time             = <null>
+18:18:56.085 | V |                      |   config_generators        = 
+18:18:56.085 | V |                      |   host                     = Rider
+18:18:56.085 | V |                      |   num_custom_components    = 0
+18:18:56.085 | V |                      |   num_custom_extensions    = 0
+18:18:56.085 | V |                      |   num_partitioned_targets  = 0
+18:18:56.085 | V |                      |   num_secrets              = 0
+18:18:56.085 | V |                      |   num_targets              = 6
+18:18:56.085 | V |                      |   os_architecture          = X64
+18:18:56.085 | V |                      |   os_platform              = Windows
+18:18:56.085 | V |                      |   target_framework         = .NETCoreApp,Version=v9.0
+18:18:56.085 | V |                      |   version_dotnet_sdk       = 10.0.102
+18:18:56.085 | V |                      |   version_nuke_common      = 9.0.4
+18:18:56.085 | V |                      |   version_nuke_global_tool = <null>
+18:18:57.294 | V |                      | InjectNonParameterValues.OnBuildInitialized (-100)
+18:18:57.352 | V |                      | EventInvoker.OnBuildInitialized (-3.4028235E+38)
+18:18:57.380 | V | Restore              | EventInvoker.OnTargetRunning (-3.4028235E+38)
+18:18:57.418 | I | Restore              | > "C:\Program Files\dotnet\dotnet.exe" restore D:\dev\Code\Projects\DsF\dragonsforge.sln
+18:18:57.424 | V | Restore              | @ D:\dev\Code\Projects\DsF
+18:18:58.257 | D | Restore              |   Determining projects to restore...
+18:18:59.017 | D | Restore              |   All projects are up-to-date for restore.
+18:18:59.051 | V | Restore              | Telemetry.OnTargetSucceeded (0)
+18:18:59.252 | V | Restore              | Sending TargetSucceeded telemetry event ...
+18:18:59.252 | V | Restore              |   build_components         = 
+18:18:59.252 | V | Restore              |   build_type               = Project
+18:18:59.252 | V | Restore              |   compile_time             = <null>
+18:18:59.252 | V | Restore              |   config_generators        = 
+18:18:59.253 | V | Restore              |   host                     = Rider
+18:18:59.253 | V | Restore              |   num_custom_components    = 0
+18:18:59.253 | V | Restore              |   num_custom_extensions    = 0
+18:18:59.253 | V | Restore              |   num_partitioned_targets  = 0
+18:18:59.253 | V | Restore              |   num_secrets              = 0
+18:18:59.253 | V | Restore              |   num_targets              = 6
+18:18:59.253 | V | Restore              |   os_architecture          = X64
+18:18:59.253 | V | Restore              |   os_platform              = Windows
+18:18:59.253 | V | Restore              |   target_current_partition = 1
+18:18:59.253 | V | Restore              |   target_duration          = 2
+18:18:59.253 | V | Restore              |   target_framework         = .NETCoreApp,Version=v9.0
+18:18:59.253 | V | Restore              |   target_name              = Restore
+18:18:59.253 | V | Restore              |   target_total_partitions  = 1
+18:18:59.253 | V | Restore              |   version_dotnet_sdk       = 10.0.102
+18:18:59.253 | V | Restore              |   version_nuke_common      = 9.0.4
+18:18:59.253 | V | Restore              |   version_nuke_global_tool = <null>
+18:18:59.368 | V | Restore              | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+18:18:59.371 | V | Compile              | EventInvoker.OnTargetRunning (-3.4028235E+38)
+18:18:59.383 | I | Compile              | > "C:\Program Files\dotnet\dotnet.exe" build D:\dev\Code\Projects\DsF\dragonsforge.sln --configuration Debug
+18:18:59.383 | V | Compile              | @ D:\dev\Code\Projects\DsF
+18:19:00.262 | D | Compile              |   Determining projects to restore...
+18:19:00.956 | D | Compile              |   All projects are up-to-date for restore.
+18:19:01.801 | D | Compile              |   AppHost -> D:\dev\Code\Projects\DsF\src\AppHost\bin\Debug\net10.0\AppHost.dll
+18:19:01.830 | D | Compile              | 
+18:19:01.831 | D | Compile              | Build succeeded.
+18:19:01.832 | D | Compile              |     0 Warning(s)
+18:19:01.832 | D | Compile              |     0 Error(s)
+18:19:01.832 | D | Compile              | 
+18:19:01.833 | D | Compile              | Time Elapsed 00:00:02.11
+18:19:01.865 | V | Compile              | Telemetry.OnTargetSucceeded (0)
+18:19:02.108 | V | Compile              | Sending TargetSucceeded telemetry event ...
+18:19:02.109 | V | Compile              |   build_components         = 
+18:19:02.109 | V | Compile              |   build_type               = Project
+18:19:02.109 | V | Compile              |   compile_time             = <null>
+18:19:02.109 | V | Compile              |   config_generators        = 
+18:19:02.109 | V | Compile              |   host                     = Rider
+18:19:02.109 | V | Compile              |   num_custom_components    = 0
+18:19:02.109 | V | Compile              |   num_custom_extensions    = 0
+18:19:02.109 | V | Compile              |   num_partitioned_targets  = 0
+18:19:02.109 | V | Compile              |   num_secrets              = 0
+18:19:02.109 | V | Compile              |   num_targets              = 6
+18:19:02.109 | V | Compile              |   os_architecture          = X64
+18:19:02.109 | V | Compile              |   os_platform              = Windows
+18:19:02.109 | V | Compile              |   target_current_partition = 1
+18:19:02.109 | V | Compile              |   target_duration          = 2
+18:19:02.109 | V | Compile              |   target_framework         = .NETCoreApp,Version=v9.0
+18:19:02.109 | V | Compile              |   target_name              = Compile
+18:19:02.109 | V | Compile              |   target_total_partitions  = 1
+18:19:02.109 | V | Compile              |   version_dotnet_sdk       = 10.0.102
+18:19:02.109 | V | Compile              |   version_nuke_common      = 9.0.4
+18:19:02.109 | V | Compile              |   version_nuke_global_tool = <null>
+18:19:02.231 | V | Compile              | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+18:19:02.233 | V | AspireRun            | EventInvoker.OnTargetRunning (-3.4028235E+38)
+18:19:02.525 | I | AspireRun            | > "C:\Program Files\dotnet\dotnet.exe" D:\dev\Code\Projects\DsF\src\AppHost\AppHost.csproj
+18:19:02.526 | V | AspireRun            | @ D:\dev\Code\Projects\DsF
+18:19:02.548 | I | AspireRun            | Aspire started (pid 29488)
+18:19:02.549 | V | AspireRun            | Telemetry.OnTargetSucceeded (0)
+18:19:02.549 | V | AspireRun            | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+18:19:02.560 | V |                      | UpdateNotification.OnBuildFinished (10)
+18:19:02.561 | V |                      | SerializeBuildServerState.OnBuildFinished (0)
+18:19:02.561 | V |                      | EventInvoker.OnBuildFinished (-3.4028235E+38)
