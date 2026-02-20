@@ -1,0 +1,67 @@
+V |                      | ArgumentsFromParametersFile.OnBuildCreated (150)
+V |                      | HandleReSharperSurrogateArguments.OnBuildCreated (150)
+V |                      | InjectParameterValues.OnBuildCreated (100)
+V |                      | HandleShellCompletion.OnBuildCreated (75)
+V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
+V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
+V |                      | UpdateNotification.OnBuildCreated (10)
+V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
+V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
+V |                      | EventInvoker.OnBuildCreated (-3.4028235E+38)
+V |                      | HandlePlanRequests.OnBuildInitialized (10)
+V |                      | HandleHelpRequests.OnBuildInitialized (5)
+V |                      | Telemetry.OnBuildInitialized (0)
+V |                      | Sending BuildStarted telemetry event ...
+V |                      |   build_components         = 
+V |                      |   build_type               = Project
+V |                      |   compile_time             = <null>
+V |                      |   config_generators        = 
+V |                      |   host                     = VSCode
+V |                      |   num_custom_components    = 0
+V |                      |   num_custom_extensions    = 0
+V |                      |   num_partitioned_targets  = 0
+V |                      |   num_secrets              = 0
+V |                      |   num_targets              = 6
+V |                      |   os_architecture          = X64
+V |                      |   os_platform              = Windows
+V |                      |   repo_branch              = main
+V |                      |   repo_commit              = 04df23
+V |                      |   repo_provider            = <null>
+V |                      |   repo_url                 = <null>
+V |                      |   target_framework         = .NETCoreApp,Version=v9.0
+V |                      |   version_dotnet_sdk       = 10.0.102
+V |                      |   version_nuke_common      = 9.0.4
+V |                      |   version_nuke_global_tool = <null>
+V |                      | InjectNonParameterValues.OnBuildInitialized (-100)
+V |                      | EventInvoker.OnBuildInitialized (-3.4028235E+38)
+V | Restore              | EventInvoker.OnTargetRunning (-3.4028235E+38)
+I | Restore              | > "C:\Program Files\dotnet\dotnet.exe" restore D:\dev\Code\Projects\DsF\dragonsforge.sln
+V | Restore              | @ D:\dev\Code\Projects\DsF
+D | Restore              |   Determining projects to restore...
+E | Restore              | D:\dev\Code\Projects\DsF\src\UserProfilesService\UserProfilesService.csproj : error NU1605: Warning As Error: Detected package downgrade: Microsoft.OpenApi from 2.0.0 to 1.6.22. Reference the package directly from the project to select a different version.  [D:\dev\Code\Projects\DsF\dragonsforge.sln]
+E | Restore              | D:\dev\Code\Projects\DsF\src\UserProfilesService\UserProfilesService.csproj : error NU1605:  UserProfilesService -> Microsoft.AspNetCore.OpenApi 10.0.2 -> Microsoft.OpenApi (>= 2.0.0)  [D:\dev\Code\Projects\DsF\dragonsforge.sln]
+E | Restore              | D:\dev\Code\Projects\DsF\src\UserProfilesService\UserProfilesService.csproj : error NU1605:  UserProfilesService -> Microsoft.OpenApi (>= 1.6.22) [D:\dev\Code\Projects\DsF\dragonsforge.sln]
+D | Restore              |   Failed to restore D:\dev\Code\Projects\DsF\src\UserProfilesService\UserProfilesService.csproj (in 494 ms).
+D | Restore              |   3 of 4 projects are up-to-date for restore.
+E | Restore              | Target Restore has thrown an exception
+Nuke.Common.Tooling.ProcessException: Process 'dotnet.exe' exited with code 1.
+   > "C:\Program Files\dotnet\dotnet.exe" restore D:\dev\Code\Projects\DsF\dragonsforge.sln
+   @ D:\dev\Code\Projects\DsF
+Standard output:
+     Determining projects to restore...
+   D:\dev\Code\Projects\DsF\src\UserProfilesService\UserProfilesService.csproj : error NU1605: Warning As Error: Detected package downgrade: Microsoft.OpenApi from 2.0.0 to 1.6.22. Reference the package directly from the project to select a different version.  [D:\dev\Code\Projects\DsF\dragonsforge.sln]
+   D:\dev\Code\Projects\DsF\src\UserProfilesService\UserProfilesService.csproj : error NU1605:  UserProfilesService -> Microsoft.AspNetCore.OpenApi 10.0.2 -> Microsoft.OpenApi (>= 2.0.0)  [D:\dev\Code\Projects\DsF\dragonsforge.sln]
+   D:\dev\Code\Projects\DsF\src\UserProfilesService\UserProfilesService.csproj : error NU1605:  UserProfilesService -> Microsoft.OpenApi (>= 1.6.22) [D:\dev\Code\Projects\DsF\dragonsforge.sln]
+     Failed to restore D:\dev\Code\Projects\DsF\src\UserProfilesService\UserProfilesService.csproj (in 494 ms).
+     3 of 4 projects are up-to-date for restore.
+
+   at Nuke.Common.Tooling.ProcessExtensions.AssertZeroExitCode(IProcess process) in /_/source/Nuke.Tooling/ProcessExtensions.cs:line 38
+   at Nuke.Common.Tooling.ToolTasks.<>c.<GetExitHandler>b__4_0(ToolOptions _, IProcess p) in /_/source/Nuke.Tooling/ToolTasks.ExitHandler.cs:line 27
+   at Nuke.Common.Tooling.ToolTasks.<>c__DisplayClass8_0.<GetExitHandlerInternal>b__3(ToolOptions o, IProcess p) in /_/source/Nuke.Tooling/ToolTasks.ExitHandler.cs:line 22
+   at Nuke.Common.Tooling.ToolTasks.Run[T](T options) in /_/source/Nuke.Tooling/ToolTasks.Run.cs:line 36
+   at Nuke.Common.Tools.DotNet.DotNetTasks.DotNetRestore(Configure`1 configurator) in /_/source/Nuke.Common/Tools/DotNet/DotNet.Generated.cs:line 48
+   at Build.<get_Restore>b__6_1() in D:\dev\Code\Projects\DsF\build\Build.cs:line 31
+   at Nuke.Common.Execution.BuildExecutor.<>c.<Execute>b__4_2(Action x) in /_/source/Nuke.Build/Execution/BuildExecutor.cs:line 120
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Nuke.Common.Execution.BuildExecutor.Execute(NukeBuild build, ExecutableTarget target, IReadOnlyCollection`1 previouslyExecutedTargets, Boolean failureMode) in /_/source/Nuke.Build/Execution/BuildExecutor.cs:line 120
+V | Restore              | EventInvoker.OnTargetFailed (-3.4028235E+38)

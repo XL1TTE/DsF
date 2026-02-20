@@ -6,7 +6,7 @@ namespace Events.User;
 [WolverineMessage]
 public record AccountRegistered
 {
-    public DateTime Time { get; init; }
+    public long Time { get; init; }
     public string RealmId { get; init; } = default!;
     public string ClientId { get; init; } = default!;
     public string ResourceId { get; set; } = default!;

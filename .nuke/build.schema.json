@@ -29,7 +29,8 @@
         "Compile",
         "OpenAspireDashBoard",
         "Restore",
-        "Test"
+        "Test",
+        "UserProfilesTesting"
       ]
     },
     "Verbosity": {

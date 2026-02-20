@@ -6,13 +6,14 @@ var builder = DistributedApplication.CreateBuilder(args);
 var MessagingLogin    = builder.AddParameter("messaging-login", builder.FromConfig<string>("Messaging:Login") ?? "admin");
 var MessagingPassword = builder.AddParameter("messaging-password", builder.FromConfig<string>("Messaging:Password") ?? "admin");
 
-var Auth                 = builder.AddKeycloak("auth-provider").WithDataVolume();
+var Auth = builder.AddKeycloak("auth-provider", port: 8080).WithDataVolume();
 var Messaging            = builder.AddRabbitMQ("messaging").WithManagementPlugin().WithDataVolume();
 var UsersDataBase        = builder.AddMongoDB("users-db");
 
 var UserProfileService = builder
                          .AddProject<UserProfilesService>("user-profiles")
                          .WithReference(UsersDataBase)
+                         .WithReference(Auth)
                          .WithReference(Messaging)
                          .WaitFor(UsersDataBase);
 
@@ -24,6 +25,7 @@ Auth.WithEnvironment(    "KK_TO_RMQ_URL",      MessagingEndpoint.Property(Endpoi
         .WithEnvironment("KK_TO_RMQ_USERNAME", MessagingLogin)
         .WithEnvironment("KK_TO_RMQ_PASSWORD", MessagingPassword)
         .WithEnvironment("KK_TO_RMQ_EXCHANGE", "Auth.Events");
+
 
 var KeyCloakPlugins = builder.FromConfig<string>("AuthService:Plugins");
 if (KeyCloakPlugins != null) {
