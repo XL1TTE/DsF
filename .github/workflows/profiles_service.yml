@@ -32,4 +32,4 @@ jobs:
             ~/.nuget/packages
           key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj', '**/Directory.Packages.props') }}
       - name: 'Run: UserProfilesTesting'
-        run: ./build.cmd UserProfilesTesting
+        run: chmod +x ./build.cmd && ./build.cmd UserProfilesTesting
