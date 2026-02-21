@@ -1,6 +1,9 @@
 using Extensions;
+using Handlers;
+using Handlers.OnAccountCreated;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.OpenApi;
+using Microsoft.EntityFrameworkCore;
+using Persistence;
 using Scalar.AspNetCore;
 using Wolverine;
 using Wolverine.RabbitMQ;
@@ -18,9 +21,17 @@ builder.Services.AddLogging(builder =>
 #endif
 });
 
+builder.Services.AddDbContext<MongoDbContext>(options =>
+{
+    var conn = builder.Configuration.GetConnectionString("users-db") ?? throw new Exception("Connection string to MongoDb is not found!");
+    options.UseMongoDB(conn, "profile-service");
+});
+
 builder.Services.AddWolverine(ExtensionDiscovery.ManualOnly, conf =>
 {
-    conf.Policies.DisableConventionalLocalRouting();
+    // conf.Policies.DisableConventionalLocalRouting();
+
+    conf.CodeGeneration.AlwaysUseServiceLocationFor<MongoDbContext>();
 
     #region Extentions
 

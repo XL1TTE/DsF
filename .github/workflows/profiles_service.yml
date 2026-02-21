@@ -31,8 +31,5 @@ jobs:
             .nuke/temp
             ~/.nuget/packages
           key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj', '**/Directory.Packages.props') }}
-     
-      - name: 'Set executable permissions'
-        run: chmod +x ./build.sh
       - name: 'Run: UserProfilesTesting'
-        run: ./build.sh UserProfilesTesting
+        run: ./build.cmd UserProfilesTesting

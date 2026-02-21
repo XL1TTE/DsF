@@ -20,5 +20,9 @@
     <ProjectReference Include="..\UserProfilesService.Contracts\UserProfilesService.Contracts.csproj" />
     <ProjectReference Include="..\UserProfilesService.Persistence\UserProfilesService.Persistence.csproj" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Update="Internal\Generated\**\*.cs" Watch="false" />
+  </ItemGroup>
 
 </Project>

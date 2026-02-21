@@ -1,296 +1,157 @@
-14:19:28.722 | V |                      | ArgumentsFromParametersFile.OnBuildCreated (150)
-14:19:28.759 | V |                      | HandleReSharperSurrogateArguments.OnBuildCreated (150)
-14:19:28.760 | V |                      | InjectParameterValues.OnBuildCreated (100)
-14:19:28.792 | V |                      | HandleShellCompletion.OnBuildCreated (75)
-14:19:29.295 | V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
-14:19:29.296 | V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
-14:19:31.144 | V |                      | Sending ConfigurationGenerated telemetry event ...
-14:19:31.147 | V |                      |   build_components         = 
-14:19:31.147 | V |                      |   build_type               = Project
-14:19:31.147 | V |                      |   compile_time             = <null>
-14:19:31.149 | V |                      |   config_generators        = GitHubActions
-14:19:31.149 | V |                      |   generator_host           = GitHubActions
-14:19:31.149 | V |                      |   generator_id             = e084d7
-14:19:31.149 | V |                      |   host                     = VSCode
-14:19:31.149 | V |                      |   num_custom_components    = 0
-14:19:31.149 | V |                      |   num_custom_extensions    = 0
-14:19:31.149 | V |                      |   num_partitioned_targets  = 0
-14:19:31.149 | V |                      |   num_secrets              = 0
-14:19:31.149 | V |                      |   num_targets              = 7
-14:19:31.149 | V |                      |   os_architecture          = X64
-14:19:31.149 | V |                      |   os_platform              = Windows
-14:19:31.149 | V |                      |   repo_branch              = main
-14:19:31.149 | V |                      |   repo_commit              = 04df23
-14:19:31.149 | V |                      |   repo_provider            = <null>
-14:19:31.149 | V |                      |   repo_url                 = <null>
-14:19:31.150 | V |                      |   target_framework         = .NETCoreApp,Version=v9.0
-14:19:31.150 | V |                      |   version_dotnet_sdk       = 10.0.102
-14:19:31.150 | V |                      |   version_nuke_common      = 9.0.4
-14:19:31.150 | V |                      |   version_nuke_global_tool = <null>
-14:19:32.396 | W |                      | Configuration files for GitHubActions (profiles_service) have changed.
-14:19:32.408 | V |                      | Updated .github\workflows\profiles_service.yml
-14:19:32.414 | V |                      | UpdateNotification.OnBuildCreated (10)
-14:19:32.415 | V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
-14:19:32.415 | V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
-14:19:32.415 | V |                      | EventInvoker.OnBuildCreated (-3.4028235E+38)
-14:19:32.454 | V |                      | HandlePlanRequests.OnBuildInitialized (10)
-14:19:32.455 | V |                      | HandleHelpRequests.OnBuildInitialized (5)
-14:19:32.456 | V |                      | Telemetry.OnBuildInitialized (0)
-14:19:32.668 | V |                      | Sending BuildStarted telemetry event ...
-14:19:32.668 | V |                      |   build_components         = 
-14:19:32.668 | V |                      |   build_type               = Project
-14:19:32.668 | V |                      |   compile_time             = <null>
-14:19:32.668 | V |                      |   config_generators        = GitHubActions
-14:19:32.668 | V |                      |   host                     = VSCode
-14:19:32.669 | V |                      |   num_custom_components    = 0
-14:19:32.669 | V |                      |   num_custom_extensions    = 0
-14:19:32.669 | V |                      |   num_partitioned_targets  = 0
-14:19:32.669 | V |                      |   num_secrets              = 0
-14:19:32.669 | V |                      |   num_targets              = 7
-14:19:32.669 | V |                      |   os_architecture          = X64
-14:19:32.669 | V |                      |   os_platform              = Windows
-14:19:32.669 | V |                      |   repo_branch              = main
-14:19:32.669 | V |                      |   repo_commit              = 04df23
-14:19:32.669 | V |                      |   repo_provider            = <null>
-14:19:32.669 | V |                      |   repo_url                 = <null>
-14:19:32.669 | V |                      |   target_framework         = .NETCoreApp,Version=v9.0
-14:19:32.669 | V |                      |   version_dotnet_sdk       = 10.0.102
-14:19:32.669 | V |                      |   version_nuke_common      = 9.0.4
-14:19:32.669 | V |                      |   version_nuke_global_tool = <null>
-14:19:32.793 | V |                      | InjectNonParameterValues.OnBuildInitialized (-100)
-14:19:32.827 | V |                      | EventInvoker.OnBuildInitialized (-3.4028235E+38)
-14:19:32.843 | V | Restore              | EventInvoker.OnTargetRunning (-3.4028235E+38)
-14:19:32.891 | I | Restore              | > "C:\Program Files\dotnet\dotnet.exe" restore D:\dev\Code\Projects\DsF\dragonsforge.sln
-14:19:32.893 | V | Restore              | @ D:\dev\Code\Projects\DsF
-14:19:33.819 | D | Restore              |   Determining projects to restore...
-14:19:36.494 | D | Restore              |   All projects are up-to-date for restore.
-14:19:36.547 | V | Restore              | Telemetry.OnTargetSucceeded (0)
-14:19:36.759 | V | Restore              | Sending TargetSucceeded telemetry event ...
-14:19:36.759 | V | Restore              |   build_components         = 
-14:19:36.759 | V | Restore              |   build_type               = Project
-14:19:36.759 | V | Restore              |   compile_time             = <null>
-14:19:36.759 | V | Restore              |   config_generators        = GitHubActions
-14:19:36.759 | V | Restore              |   host                     = VSCode
-14:19:36.759 | V | Restore              |   num_custom_components    = 0
-14:19:36.759 | V | Restore              |   num_custom_extensions    = 0
-14:19:36.759 | V | Restore              |   num_partitioned_targets  = 0
-14:19:36.759 | V | Restore              |   num_secrets              = 0
-14:19:36.759 | V | Restore              |   num_targets              = 7
-14:19:36.759 | V | Restore              |   os_architecture          = X64
-14:19:36.759 | V | Restore              |   os_platform              = Windows
-14:19:36.759 | V | Restore              |   repo_branch              = main
-14:19:36.759 | V | Restore              |   repo_commit              = 04df23
-14:19:36.759 | V | Restore              |   repo_provider            = <null>
-14:19:36.759 | V | Restore              |   repo_url                 = <null>
-14:19:36.759 | V | Restore              |   target_current_partition = 1
-14:19:36.759 | V | Restore              |   target_duration          = 4
-14:19:36.759 | V | Restore              |   target_framework         = .NETCoreApp,Version=v9.0
-14:19:36.759 | V | Restore              |   target_name              = Restore
-14:19:36.759 | V | Restore              |   target_total_partitions  = 1
-14:19:36.759 | V | Restore              |   version_dotnet_sdk       = 10.0.102
-14:19:36.759 | V | Restore              |   version_nuke_common      = 9.0.4
-14:19:36.759 | V | Restore              |   version_nuke_global_tool = <null>
-14:19:36.870 | V | Restore              | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
-14:19:36.878 | V | Compile              | EventInvoker.OnTargetRunning (-3.4028235E+38)
-14:19:36.897 | I | Compile              | > "C:\Program Files\dotnet\dotnet.exe" build D:\dev\Code\Projects\DsF\dragonsforge.sln --configuration Debug
-14:19:36.903 | V | Compile              | @ D:\dev\Code\Projects\DsF
-14:19:37.887 | D | Compile              |   Determining projects to restore...
-14:19:38.868 | D | Compile              |   All projects are up-to-date for restore.
-14:19:39.196 | D | Compile              |   UserProfilesService.Contracts -> D:\dev\Code\Projects\DsF\src\UserProfilesService.Contracts\bin\Debug\net10.0\UserProfilesService.Contracts.dll
-14:19:39.356 | D | Compile              |   AppHost.ServiceDefaults -> D:\dev\Code\Projects\DsF\src\AppHost.ServiceDefaults\bin\Debug\net10.0\AppHost.ServiceDefaults.dll
-14:19:39.476 | D | Compile              |   UserProfilesService.Persistence -> D:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\bin\Debug\net10.0\UserProfilesService.Persistence.dll
-14:19:41.188 | D | Compile              |   UserProfilesService -> D:\dev\Code\Projects\DsF\src\UserProfilesService\bin\Debug\net10.0\UserProfilesService.dll
-14:19:41.977 | D | Compile              |   AppHost -> D:\dev\Code\Projects\DsF\src\AppHost\bin\Debug\net10.0\AppHost.dll
-14:19:42.818 | D | Compile              |   UserProfilesService.Testing -> D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\bin\Debug\net10.0\UserProfilesService.Testing.dll
-14:19:42.838 | D | Compile              | 
-14:19:42.840 | D | Compile              | Build succeeded.
-14:19:42.841 | D | Compile              |     0 Warning(s)
-14:19:42.843 | D | Compile              |     0 Error(s)
-14:19:42.844 | D | Compile              | 
-14:19:42.845 | D | Compile              | Time Elapsed 00:00:05.60
-14:19:42.877 | V | Compile              | Telemetry.OnTargetSucceeded (0)
-14:19:43.137 | V | Compile              | Sending TargetSucceeded telemetry event ...
-14:19:43.137 | V | Compile              |   build_components         = 
-14:19:43.137 | V | Compile              |   build_type               = Project
-14:19:43.137 | V | Compile              |   compile_time             = <null>
-14:19:43.137 | V | Compile              |   config_generators        = GitHubActions
-14:19:43.137 | V | Compile              |   host                     = VSCode
-14:19:43.137 | V | Compile              |   num_custom_components    = 0
-14:19:43.137 | V | Compile              |   num_custom_extensions    = 0
-14:19:43.137 | V | Compile              |   num_partitioned_targets  = 0
-14:19:43.137 | V | Compile              |   num_secrets              = 0
-14:19:43.137 | V | Compile              |   num_targets              = 7
-14:19:43.137 | V | Compile              |   os_architecture          = X64
-14:19:43.137 | V | Compile              |   os_platform              = Windows
-14:19:43.137 | V | Compile              |   repo_branch              = main
-14:19:43.137 | V | Compile              |   repo_commit              = 04df23
-14:19:43.137 | V | Compile              |   repo_provider            = <null>
-14:19:43.137 | V | Compile              |   repo_url                 = <null>
-14:19:43.137 | V | Compile              |   target_current_partition = 1
-14:19:43.137 | V | Compile              |   target_duration          = 6
-14:19:43.137 | V | Compile              |   target_framework         = .NETCoreApp,Version=v9.0
-14:19:43.137 | V | Compile              |   target_name              = Compile
-14:19:43.138 | V | Compile              |   target_total_partitions  = 1
-14:19:43.138 | V | Compile              |   version_dotnet_sdk       = 10.0.102
-14:19:43.138 | V | Compile              |   version_nuke_common      = 9.0.4
-14:19:43.138 | V | Compile              |   version_nuke_global_tool = <null>
-14:19:43.249 | V | Compile              | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
-14:19:43.257 | V | UserProfilesTesting  | EventInvoker.OnTargetRunning (-3.4028235E+38)
-14:19:43.273 | I | UserProfilesTesting  | > "C:\Program Files\dotnet\dotnet.exe" test D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\UserProfilesService.Testing.csproj --configuration Debug --no-build --no-restore --framework net10.0
-14:19:43.276 | V | UserProfilesTesting  | @ D:\dev\Code\Projects\DsF
-14:19:44.230 | D | UserProfilesTesting  | Test run for D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\bin\Debug\net10.0\UserProfilesService.Testing.dll (.NETCoreApp,Version=v10.0)
-14:19:44.361 | D | UserProfilesTesting  | VSTest version 18.0.1 (x64)
-14:19:44.365 | D | UserProfilesTesting  | 
-14:19:44.486 | D | UserProfilesTesting  | Starting test execution, please wait...
-14:19:44.542 | D | UserProfilesTesting  | A total of 1 test files matched the specified pattern.
-14:20:40.547 | E | UserProfilesTesting  | [xUnit.net 00:00:55.37]     Testing.RepositoryTests.repository_should_handle_data_correctly.add_call_should_create_new_record_if_id_unique [FAIL]
-14:20:40.656 | E | UserProfilesTesting  | [xUnit.net 00:00:55.48]     Testing.RepositoryTests.repository_should_handle_data_correctly.delete_call_should_remove_record [FAIL]
-14:20:40.777 | D | UserProfilesTesting  |   Failed Testing.RepositoryTests.repository_should_handle_data_correctly.add_call_should_create_new_record_if_id_unique [1 s]
-14:20:40.779 | D | UserProfilesTesting  |   Error Message:
-14:20:40.785 | D | UserProfilesTesting  |    System.ArgumentNullException : Value cannot be null. (Parameter 'databaseName')
-14:20:40.786 | D | UserProfilesTesting  |   Stack Trace:
-14:20:40.789 | D | UserProfilesTesting  |      at MongoDB.Driver.Core.Misc.Ensure.IsNotNull[T](T value, String paramName)
-14:20:40.791 | D | UserProfilesTesting  |    at MongoDB.Driver.DatabaseNamespace..ctor(String databaseName)
-14:20:40.792 | D | UserProfilesTesting  |    at MongoDB.Driver.MongoClient.GetDatabase(String name, MongoDatabaseSettings settings)
-14:20:40.794 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoClientWrapper.get_Database()
-14:20:40.796 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoClientWrapper.GetCollection[T](String collectionName)
-14:20:40.798 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoDatabaseWrapper.WriteBatchesAsync(IEnumerable`1 updates, IClientSessionHandle session, CancellationToken cancellationToken)
-14:20:40.800 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoDatabaseWrapper.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
-14:20:40.802 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
-14:20:40.805 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
-14:20:40.807 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
-14:20:40.809 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
-14:20:40.811 | D | UserProfilesTesting  |    at Persistence.Repositories.ProfileRepository.AddAsync(ProfileDocument entity, CancellationToken cancellationToken) in D:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\Repositories\ProfileRepository.cs:line 21
-14:20:40.813 | D | UserProfilesTesting  |    at Testing.RepositoryTests.repository_should_handle_data_correctly.add_call_should_create_new_record_if_id_unique() in D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\RepositoryTests\repository_should_handle_data_correctly.cs:line 43
-14:20:40.815 | D | UserProfilesTesting  | --- End of stack trace from previous location ---
-14:20:40.818 | D | UserProfilesTesting  |   Failed Testing.RepositoryTests.repository_should_handle_data_correctly.delete_call_should_remove_record [111 ms]
-14:20:40.819 | D | UserProfilesTesting  |   Error Message:
-14:20:40.821 | D | UserProfilesTesting  |    System.ArgumentNullException : Value cannot be null. (Parameter 'databaseName')
-14:20:40.823 | D | UserProfilesTesting  |   Stack Trace:
-14:20:40.825 | D | UserProfilesTesting  |      at MongoDB.Driver.Core.Misc.Ensure.IsNotNull[T](T value, String paramName)
-14:20:40.826 | D | UserProfilesTesting  |    at MongoDB.Driver.DatabaseNamespace..ctor(String databaseName)
-14:20:40.828 | D | UserProfilesTesting  |    at MongoDB.Driver.MongoClient.GetDatabase(String name, MongoDatabaseSettings settings)
-14:20:40.831 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoClientWrapper.get_Database()
-14:20:40.833 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoClientWrapper.GetCollection[T](String collectionName)
-14:20:40.835 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoDatabaseWrapper.WriteBatchesAsync(IEnumerable`1 updates, IClientSessionHandle session, CancellationToken cancellationToken)
-14:20:40.837 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoDatabaseWrapper.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
-14:20:40.840 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
-14:20:40.841 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
-14:20:40.843 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
-14:20:40.845 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
-14:20:40.847 | D | UserProfilesTesting  |    at Persistence.Repositories.ProfileRepository.AddAsync(ProfileDocument entity, CancellationToken cancellationToken) in D:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\Repositories\ProfileRepository.cs:line 21
-14:20:40.849 | D | UserProfilesTesting  |    at Testing.RepositoryTests.repository_should_handle_data_correctly.delete_call_should_remove_record() in D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\RepositoryTests\repository_should_handle_data_correctly.cs:line 107
-14:20:40.851 | D | UserProfilesTesting  | --- End of stack trace from previous location ---
-14:20:41.087 | E | UserProfilesTesting  | [xUnit.net 00:00:55.92]     Testing.RepositoryTests.repository_should_handle_data_correctly.get_by_id_should_return_null_if_not_found [FAIL]
-14:20:41.097 | E | UserProfilesTesting  | [xUnit.net 00:00:55.93]     Testing.RepositoryTests.repository_should_handle_data_correctly.get_all_should_return_all_documents [FAIL]
-14:20:41.104 | E | UserProfilesTesting  | [xUnit.net 00:00:55.93]     Testing.RepositoryTests.repository_should_handle_data_correctly.update_call_should_modify_existing_record [FAIL]
-14:20:41.265 | E | UserProfilesTesting  | [xUnit.net 00:00:56.09]     Testing.RepositoryTests.repository_should_handle_data_correctly.delete_call_should_not_fail_for_non_existent_id [FAIL]
-14:20:41.981 | D | UserProfilesTesting  |   Failed Testing.RepositoryTests.repository_should_handle_data_correctly.get_by_id_should_return_null_if_not_found [431 ms]
-14:20:41.983 | D | UserProfilesTesting  |   Error Message:
-14:20:41.984 | D | UserProfilesTesting  |    System.ArgumentNullException : Value cannot be null. (Parameter 'databaseName')
-14:20:41.985 | D | UserProfilesTesting  |   Stack Trace:
-14:20:41.987 | D | UserProfilesTesting  |      at MongoDB.Driver.Core.Misc.Ensure.IsNotNull[T](T value, String paramName)
-14:20:41.988 | D | UserProfilesTesting  |    at MongoDB.Driver.DatabaseNamespace..ctor(String databaseName)
-14:20:41.989 | D | UserProfilesTesting  |    at MongoDB.Driver.MongoClient.GetDatabase(String name, MongoDatabaseSettings settings)
-14:20:41.991 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoClientWrapper.get_Database()
-14:20:41.992 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoClientWrapper.GetCollection[T](String collectionName)
-14:20:41.993 | D | UserProfilesTesting  |    at lambda_method109(Closure, QueryContext)
-14:20:41.994 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteCore[TResult](Expression query, Boolean async, CancellationToken cancellationToken)
-14:20:41.996 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
-14:20:41.997 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
-14:20:41.999 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
-14:20:42.000 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
-14:20:42.002 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
-14:20:42.003 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.Internal.EntityFinder`1.FindAsync(Object[] keyValues, CancellationToken cancellationToken)
-14:20:42.005 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.FindAsync(Object[] keyValues, CancellationToken cancellationToken)
-14:20:42.006 | D | UserProfilesTesting  |    at Persistence.Repositories.ProfileRepository.GetByIdAsync(String id, CancellationToken cancellationToken) in D:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\Repositories\ProfileRepository.cs:line 27
-14:20:42.008 | D | UserProfilesTesting  |    at Testing.RepositoryTests.repository_should_handle_data_correctly.get_by_id_should_return_null_if_not_found() in D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\RepositoryTests\repository_should_handle_data_correctly.cs:line 61
-14:20:42.009 | D | UserProfilesTesting  | --- End of stack trace from previous location ---
-14:20:42.011 | D | UserProfilesTesting  |   Failed Testing.RepositoryTests.repository_should_handle_data_correctly.get_all_should_return_all_documents [8 ms]
-14:20:42.012 | D | UserProfilesTesting  |   Error Message:
-14:20:42.013 | D | UserProfilesTesting  |    System.ArgumentNullException : Value cannot be null. (Parameter 'databaseName')
-14:20:42.014 | D | UserProfilesTesting  |   Stack Trace:
-14:20:42.015 | D | UserProfilesTesting  |      at MongoDB.Driver.Core.Misc.Ensure.IsNotNull[T](T value, String paramName)
-14:20:42.016 | D | UserProfilesTesting  |    at MongoDB.Driver.DatabaseNamespace..ctor(String databaseName)
-14:20:42.018 | D | UserProfilesTesting  |    at MongoDB.Driver.MongoClient.GetDatabase(String name, MongoDatabaseSettings settings)
-14:20:42.019 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoClientWrapper.get_Database()
-14:20:42.020 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoClientWrapper.GetCollection[T](String collectionName)
-14:20:42.021 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoDatabaseWrapper.WriteBatchesAsync(IEnumerable`1 updates, IClientSessionHandle session, CancellationToken cancellationToken)
-14:20:42.022 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoDatabaseWrapper.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
-14:20:42.023 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
-14:20:42.024 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
-14:20:42.025 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
-14:20:42.026 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
-14:20:42.027 | D | UserProfilesTesting  |    at Persistence.Repositories.ProfileRepository.AddAsync(ProfileDocument entity, CancellationToken cancellationToken) in D:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\Repositories\ProfileRepository.cs:line 21
-14:20:42.028 | D | UserProfilesTesting  |    at Testing.RepositoryTests.repository_should_handle_data_correctly.get_all_should_return_all_documents() in D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\RepositoryTests\repository_should_handle_data_correctly.cs:line 142
-14:20:42.029 | D | UserProfilesTesting  | --- End of stack trace from previous location ---
-14:20:42.031 | D | UserProfilesTesting  |   Failed Testing.RepositoryTests.repository_should_handle_data_correctly.update_call_should_modify_existing_record [4 ms]
-14:20:42.032 | D | UserProfilesTesting  |   Error Message:
-14:20:42.033 | D | UserProfilesTesting  |    System.ArgumentNullException : Value cannot be null. (Parameter 'databaseName')
-14:20:42.035 | D | UserProfilesTesting  |   Stack Trace:
-14:20:42.036 | D | UserProfilesTesting  |      at MongoDB.Driver.Core.Misc.Ensure.IsNotNull[T](T value, String paramName)
-14:20:42.038 | D | UserProfilesTesting  |    at MongoDB.Driver.DatabaseNamespace..ctor(String databaseName)
-14:20:42.039 | D | UserProfilesTesting  |    at MongoDB.Driver.MongoClient.GetDatabase(String name, MongoDatabaseSettings settings)
-14:20:42.040 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoClientWrapper.get_Database()
-14:20:42.041 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoClientWrapper.GetCollection[T](String collectionName)
-14:20:42.043 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoDatabaseWrapper.WriteBatchesAsync(IEnumerable`1 updates, IClientSessionHandle session, CancellationToken cancellationToken)
-14:20:42.044 | D | UserProfilesTesting  |    at MongoDB.EntityFrameworkCore.Storage.MongoDatabaseWrapper.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
-14:20:42.045 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
-14:20:42.046 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
-14:20:42.048 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
-14:20:42.049 | D | UserProfilesTesting  |    at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
-14:20:42.051 | D | UserProfilesTesting  |    at Persistence.Repositories.ProfileRepository.AddAsync(ProfileDocument entity, CancellationToken cancellationToken) in D:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\Repositories\ProfileRepository.cs:line 21
-14:20:42.052 | D | UserProfilesTesting  |    at Testing.RepositoryTests.repository_should_handle_data_correctly.update_call_should_modify_existing_record() in D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\RepositoryTests\repository_should_handle_data_correctly.cs:line 78
-14:20:42.054 | D | UserProfilesTesting  | --- End of stack trace from previous location ---
-14:20:42.055 | D | UserProfilesTesting  |   Failed Testing.RepositoryTests.repository_should_handle_data_correctly.delete_call_should_not_fail_for_non_existent_id [153 ms]
-14:20:42.056 | D | UserProfilesTesting  |   Error Message:
-14:20:42.058 | D | UserProfilesTesting  |    Shouldly.ShouldAssertException : `async () => await _repository.DeleteAsync("non-existent-id")`
-14:20:42.059 | D | UserProfilesTesting  |     should not throw but threw
-14:20:42.060 | D | UserProfilesTesting  | System.ArgumentNullException
-14:20:42.061 | D | UserProfilesTesting  |     with message
-14:20:42.062 | D | UserProfilesTesting  | "Value cannot be null. (Parameter 'databaseName')"
-14:20:42.063 | D | UserProfilesTesting  |   Stack Trace:
-14:20:42.065 | D | UserProfilesTesting  |      at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
-14:20:42.066 | D | UserProfilesTesting  | --- End of stack trace from previous location ---
-14:20:42.067 | D | UserProfilesTesting  |    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-14:20:42.068 | D | UserProfilesTesting  |    at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
-14:20:42.069 | D | UserProfilesTesting  |    at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
-14:20:42.070 | D | UserProfilesTesting  | --- End of stack trace from previous location ---
-14:20:42.071 | D | UserProfilesTesting  |    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-14:20:42.072 | D | UserProfilesTesting  |    at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-14:20:42.074 | D | UserProfilesTesting  |    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
-14:20:42.074 | D | UserProfilesTesting  |    at Testing.RepositoryTests.repository_should_handle_data_correctly.delete_call_should_not_fail_for_non_existent_id() in D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\RepositoryTests\repository_should_handle_data_correctly.cs:line 121
-14:20:42.075 | D | UserProfilesTesting  |    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-14:20:42.076 | D | UserProfilesTesting  |    at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-14:20:42.077 | D | UserProfilesTesting  |    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
-14:20:42.078 | D | UserProfilesTesting  | --- End of stack trace from previous location ---
-14:20:42.080 | D | UserProfilesTesting  |    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-14:20:42.081 | D | UserProfilesTesting  |    at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-14:20:42.082 | D | UserProfilesTesting  |    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
-14:20:42.084 | D | UserProfilesTesting  |    at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
-14:20:42.085 | D | UserProfilesTesting  |    at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-14:20:42.086 | D | UserProfilesTesting  |    at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task, ConfigureAwaitOptions options)
-14:20:42.088 | D | UserProfilesTesting  | 
-14:20:42.089 | D | UserProfilesTesting  | Failed!  - Failed:     6, Passed:     0, Skipped:     0, Total:     6, Duration: 2 s - UserProfilesService.Testing.dll (net10.0)
-14:20:42.108 | E | UserProfilesTesting  | Target UserProfilesTesting has thrown an exception
-Nuke.Common.Tooling.ProcessException: Process 'dotnet.exe' exited with code 1.
-   > "C:\Program Files\dotnet\dotnet.exe" test D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\UserProfilesService.Testing.csproj --configuration Debug --no-build --no-restore --framework net10.0
-   @ D:\dev\Code\Projects\DsF
-Error output:
-   [xUnit.net 00:00:55.37]     Testing.RepositoryTests.repository_should_handle_data_correctly.add_call_should_create_new_record_if_id_unique [FAIL]
-   [xUnit.net 00:00:55.48]     Testing.RepositoryTests.repository_should_handle_data_correctly.delete_call_should_remove_record [FAIL]
-   [xUnit.net 00:00:55.92]     Testing.RepositoryTests.repository_should_handle_data_correctly.get_by_id_should_return_null_if_not_found [FAIL]
-   [xUnit.net 00:00:55.93]     Testing.RepositoryTests.repository_should_handle_data_correctly.get_all_should_return_all_documents [FAIL]
-   [xUnit.net 00:00:55.93]     Testing.RepositoryTests.repository_should_handle_data_correctly.update_call_should_modify_existing_record [FAIL]
-   [xUnit.net 00:00:56.09]     Testing.RepositoryTests.repository_should_handle_data_correctly.delete_call_should_not_fail_for_non_existent_id [FAIL]
-
-   at Nuke.Common.Tooling.ProcessExtensions.AssertZeroExitCode(IProcess process) in /_/source/Nuke.Tooling/ProcessExtensions.cs:line 38
-   at Nuke.Common.Tooling.ToolTasks.<>c.<GetExitHandler>b__4_0(ToolOptions _, IProcess p) in /_/source/Nuke.Tooling/ToolTasks.ExitHandler.cs:line 27
-   at Nuke.Common.Tooling.ToolTasks.<>c__DisplayClass8_0.<GetExitHandlerInternal>b__3(ToolOptions o, IProcess p) in /_/source/Nuke.Tooling/ToolTasks.ExitHandler.cs:line 22
-   at Nuke.Common.Tooling.ToolTasks.Run[T](T options) in /_/source/Nuke.Tooling/ToolTasks.Run.cs:line 36
-   at Nuke.Common.Tools.DotNet.DotNetTasks.DotNetTest(Configure`1 configurator) in /_/source/Nuke.Common/Tools/DotNet/DotNet.Generated.cs:line 34
-   at Build.<get_UserProfilesTesting>b__17_1() in D:\dev\Code\Projects\DsF\build\Build.cs:line 78
-   at Nuke.Common.Execution.BuildExecutor.<>c.<Execute>b__4_2(Action x) in /_/source/Nuke.Build/Execution/BuildExecutor.cs:line 120
-   at System.Collections.Generic.List`1.ForEach(Action`1 action)
-   at Nuke.Common.Execution.BuildExecutor.Execute(NukeBuild build, ExecutableTarget target, IReadOnlyCollection`1 previouslyExecutedTargets, Boolean failureMode) in /_/source/Nuke.Build/Execution/BuildExecutor.cs:line 120
-14:20:42.147 | V | UserProfilesTesting  | EventInvoker.OnTargetFailed (-3.4028235E+38)
+16:11:08.675 | V |                      | ArgumentsFromParametersFile.OnBuildCreated (150)
+16:11:08.707 | V |                      | HandleReSharperSurrogateArguments.OnBuildCreated (150)
+16:11:08.707 | V |                      | InjectParameterValues.OnBuildCreated (100)
+16:11:08.751 | V |                      | HandleShellCompletion.OnBuildCreated (75)
+16:11:09.313 | V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
+16:11:09.314 | V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
+16:11:12.314 | V |                      | Sending ConfigurationGenerated telemetry event ...
+16:11:12.317 | V |                      |   build_components         = 
+16:11:12.317 | V |                      |   build_type               = Project
+16:11:12.317 | V |                      |   compile_time             = <null>
+16:11:12.317 | V |                      |   config_generators        = GitHubActions
+16:11:12.318 | V |                      |   generator_host           = GitHubActions
+16:11:12.318 | V |                      |   generator_id             = e084d7
+16:11:12.318 | V |                      |   host                     = VSCode
+16:11:12.318 | V |                      |   num_custom_components    = 0
+16:11:12.318 | V |                      |   num_custom_extensions    = 0
+16:11:12.318 | V |                      |   num_partitioned_targets  = 0
+16:11:12.318 | V |                      |   num_secrets              = 0
+16:11:12.318 | V |                      |   num_targets              = 7
+16:11:12.318 | V |                      |   os_architecture          = X64
+16:11:12.318 | V |                      |   os_platform              = Windows
+16:11:12.318 | V |                      |   repo_branch              = main
+16:11:12.318 | V |                      |   repo_commit              = 5f3b0d
+16:11:12.318 | V |                      |   repo_provider            = GitHub
+16:11:12.318 | V |                      |   repo_url                 = ed8394
+16:11:12.318 | V |                      |   target_framework         = .NETCoreApp,Version=v9.0
+16:11:12.318 | V |                      |   version_dotnet_sdk       = 10.0.102
+16:11:12.318 | V |                      |   version_nuke_common      = 9.0.4
+16:11:12.318 | V |                      |   version_nuke_global_tool = <null>
+16:11:13.377 | W |                      | Configuration files for GitHubActions (profiles_service) have changed.
+16:11:13.389 | V |                      | Updated .github\workflows\profiles_service.yml
+16:11:53.343 | V |                      | UpdateNotification.OnBuildCreated (10)
+16:11:53.344 | V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
+16:11:53.344 | V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
+16:11:53.344 | V |                      | EventInvoker.OnBuildCreated (-3.4028235E+38)
+16:11:53.395 | V |                      | HandlePlanRequests.OnBuildInitialized (10)
+16:11:53.395 | V |                      | HandleHelpRequests.OnBuildInitialized (5)
+16:11:53.396 | V |                      | Telemetry.OnBuildInitialized (0)
+16:11:53.597 | V |                      | Sending BuildStarted telemetry event ...
+16:11:53.598 | V |                      |   build_components         = 
+16:11:53.598 | V |                      |   build_type               = Project
+16:11:53.598 | V |                      |   compile_time             = <null>
+16:11:53.598 | V |                      |   config_generators        = GitHubActions
+16:11:53.598 | V |                      |   host                     = VSCode
+16:11:53.598 | V |                      |   num_custom_components    = 0
+16:11:53.598 | V |                      |   num_custom_extensions    = 0
+16:11:53.598 | V |                      |   num_partitioned_targets  = 0
+16:11:53.598 | V |                      |   num_secrets              = 0
+16:11:53.598 | V |                      |   num_targets              = 7
+16:11:53.598 | V |                      |   os_architecture          = X64
+16:11:53.598 | V |                      |   os_platform              = Windows
+16:11:53.598 | V |                      |   repo_branch              = main
+16:11:53.598 | V |                      |   repo_commit              = 5f3b0d
+16:11:53.598 | V |                      |   repo_provider            = GitHub
+16:11:53.598 | V |                      |   repo_url                 = ed8394
+16:11:53.598 | V |                      |   target_framework         = .NETCoreApp,Version=v9.0
+16:11:53.598 | V |                      |   version_dotnet_sdk       = 10.0.102
+16:11:53.598 | V |                      |   version_nuke_common      = 9.0.4
+16:11:53.598 | V |                      |   version_nuke_global_tool = <null>
+16:11:53.719 | V |                      | InjectNonParameterValues.OnBuildInitialized (-100)
+16:11:53.755 | V |                      | EventInvoker.OnBuildInitialized (-3.4028235E+38)
+16:11:53.770 | V | Restore              | EventInvoker.OnTargetRunning (-3.4028235E+38)
+16:11:53.814 | I | Restore              | > "C:\Program Files\dotnet\dotnet.exe" restore D:\dev\Code\Projects\DsF\dragonsforge.sln
+16:11:53.816 | V | Restore              | @ D:\dev\Code\Projects\DsF
+16:11:54.690 | D | Restore              |   Determining projects to restore...
+16:11:55.796 | D | Restore              |   Restored d:\dev\Code\Projects\DsF\src\UserProfilesService.Contracts\UserProfilesService.Contracts.csproj (in 237 ms).
+16:11:55.968 | D | Restore              |   Restored d:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\UserProfilesService.Persistence.csproj (in 425 ms).
+16:11:56.037 | D | Restore              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService\UserProfilesService.csproj (in 482 ms).
+16:11:56.070 | D | Restore              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\UserProfilesService.Testing.csproj (in 513 ms).
+16:11:56.073 | D | Restore              |   2 of 6 projects are up-to-date for restore.
+16:11:56.114 | V | Restore              | Telemetry.OnTargetSucceeded (0)
+16:11:56.345 | V | Restore              | Sending TargetSucceeded telemetry event ...
+16:11:56.346 | V | Restore              |   build_components         = 
+16:11:56.346 | V | Restore              |   build_type               = Project
+16:11:56.346 | V | Restore              |   compile_time             = <null>
+16:11:56.346 | V | Restore              |   config_generators        = GitHubActions
+16:11:56.346 | V | Restore              |   host                     = VSCode
+16:11:56.346 | V | Restore              |   num_custom_components    = 0
+16:11:56.346 | V | Restore              |   num_custom_extensions    = 0
+16:11:56.346 | V | Restore              |   num_partitioned_targets  = 0
+16:11:56.346 | V | Restore              |   num_secrets              = 0
+16:11:56.346 | V | Restore              |   num_targets              = 7
+16:11:56.346 | V | Restore              |   os_architecture          = X64
+16:11:56.346 | V | Restore              |   os_platform              = Windows
+16:11:56.347 | V | Restore              |   repo_branch              = main
+16:11:56.347 | V | Restore              |   repo_commit              = 5f3b0d
+16:11:56.347 | V | Restore              |   repo_provider            = GitHub
+16:11:56.347 | V | Restore              |   repo_url                 = ed8394
+16:11:56.347 | V | Restore              |   target_current_partition = 1
+16:11:56.347 | V | Restore              |   target_duration          = 2
+16:11:56.347 | V | Restore              |   target_framework         = .NETCoreApp,Version=v9.0
+16:11:56.347 | V | Restore              |   target_name              = Restore
+16:11:56.347 | V | Restore              |   target_total_partitions  = 1
+16:11:56.347 | V | Restore              |   version_dotnet_sdk       = 10.0.102
+16:11:56.347 | V | Restore              |   version_nuke_common      = 9.0.4
+16:11:56.347 | V | Restore              |   version_nuke_global_tool = <null>
+16:11:56.473 | V | Restore              | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+16:11:56.480 | V | Compile              | EventInvoker.OnTargetRunning (-3.4028235E+38)
+16:11:56.489 | I | Compile              | > "C:\Program Files\dotnet\dotnet.exe" build D:\dev\Code\Projects\DsF\dragonsforge.sln --configuration Debug
+16:11:56.492 | V | Compile              | @ D:\dev\Code\Projects\DsF
+16:11:57.470 | D | Compile              |   Determining projects to restore...
+16:11:58.392 | D | Compile              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService.Contracts\UserProfilesService.Contracts.csproj (in 178 ms).
+16:11:58.558 | D | Compile              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\UserProfilesService.Persistence.csproj (in 378 ms).
+16:11:58.637 | D | Compile              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService\UserProfilesService.csproj (in 443 ms).
+16:11:58.642 | D | Compile              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\UserProfilesService.Testing.csproj (in 446 ms).
+16:11:58.645 | D | Compile              |   2 of 6 projects are up-to-date for restore.
+16:11:59.008 | D | Compile              |   UserProfilesService.Contracts -> D:\dev\Code\Projects\DsF\src\UserProfilesService.Contracts\bin\Debug\net10.0\UserProfilesService.Contracts.dll
+16:11:59.190 | D | Compile              |   AppHost.ServiceDefaults -> D:\dev\Code\Projects\DsF\src\AppHost.ServiceDefaults\bin\Debug\net10.0\AppHost.ServiceDefaults.dll
+16:11:59.249 | D | Compile              |   UserProfilesService.Persistence -> D:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\bin\Debug\net10.0\UserProfilesService.Persistence.dll
+16:12:00.302 | D | Compile              |   UserProfilesService -> D:\dev\Code\Projects\DsF\src\UserProfilesService\bin\Debug\net10.0\UserProfilesService.dll
+16:12:00.861 | D | Compile              |   AppHost -> D:\dev\Code\Projects\DsF\src\AppHost\bin\Debug\net10.0\AppHost.dll
+16:12:01.149 | D | Compile              |   UserProfilesService.Testing -> D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\bin\Debug\net10.0\UserProfilesService.Testing.dll
+16:12:01.164 | D | Compile              | 
+16:12:01.165 | D | Compile              | Build succeeded.
+16:12:01.167 | D | Compile              |     0 Warning(s)
+16:12:01.168 | D | Compile              |     0 Error(s)
+16:12:01.170 | D | Compile              | 
+16:12:01.171 | D | Compile              | Time Elapsed 00:00:04.35
+16:12:01.209 | V | Compile              | Telemetry.OnTargetSucceeded (0)
+16:12:01.427 | V | Compile              | Sending TargetSucceeded telemetry event ...
+16:12:01.427 | V | Compile              |   build_components         = 
+16:12:01.427 | V | Compile              |   build_type               = Project
+16:12:01.427 | V | Compile              |   compile_time             = <null>
+16:12:01.427 | V | Compile              |   config_generators        = GitHubActions
+16:12:01.427 | V | Compile              |   host                     = VSCode
+16:12:01.427 | V | Compile              |   num_custom_components    = 0
+16:12:01.427 | V | Compile              |   num_custom_extensions    = 0
+16:12:01.427 | V | Compile              |   num_partitioned_targets  = 0
+16:12:01.427 | V | Compile              |   num_secrets              = 0
+16:12:01.427 | V | Compile              |   num_targets              = 7
+16:12:01.427 | V | Compile              |   os_architecture          = X64
+16:12:01.427 | V | Compile              |   os_platform              = Windows
+16:12:01.427 | V | Compile              |   repo_branch              = main
+16:12:01.427 | V | Compile              |   repo_commit              = 5f3b0d
+16:12:01.427 | V | Compile              |   repo_provider            = GitHub
+16:12:01.427 | V | Compile              |   repo_url                 = ed8394
+16:12:01.427 | V | Compile              |   target_current_partition = 1
+16:12:01.427 | V | Compile              |   target_duration          = 5
+16:12:01.428 | V | Compile              |   target_framework         = .NETCoreApp,Version=v9.0
+16:12:01.428 | V | Compile              |   target_name              = Compile
+16:12:01.428 | V | Compile              |   target_total_partitions  = 1
+16:12:01.428 | V | Compile              |   version_dotnet_sdk       = 10.0.102
+16:12:01.428 | V | Compile              |   version_nuke_common      = 9.0.4
+16:12:01.428 | V | Compile              |   version_nuke_global_tool = <null>
+16:12:01.563 | V | Compile              | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+16:12:01.570 | V | UserProfilesTesting  | EventInvoker.OnTargetRunning (-3.4028235E+38)
+16:12:01.587 | I | UserProfilesTesting  | > "C:\Program Files\dotnet\dotnet.exe" test D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\UserProfilesService.Testing.csproj --configuration Debug --no-build --no-restore --framework net10.0
+16:12:01.589 | V | UserProfilesTesting  | @ D:\dev\Code\Projects\DsF
+16:12:02.545 | D | UserProfilesTesting  | Test run for D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\bin\Debug\net10.0\UserProfilesService.Testing.dll (.NETCoreApp,Version=v10.0)
+16:12:02.688 | D | UserProfilesTesting  | VSTest version 18.0.1 (x64)
+16:12:02.693 | D | UserProfilesTesting  | 
+16:12:02.845 | D | UserProfilesTesting  | Starting test execution, please wait...
+16:12:02.891 | D | UserProfilesTesting  | A total of 1 test files matched the specified pattern.
+16:12:18.359 | D | UserProfilesTesting  | 
+16:12:18.368 | D | UserProfilesTesting  | Passed!  - Failed:     0, Passed:     4, Skipped:     0, Total:     4, Duration: 5 s - UserProfilesService.Testing.dll (net10.0)
+16:12:18.447 | V | UserProfilesTesting  | Telemetry.OnTargetSucceeded (0)
+16:12:18.447 | V | UserProfilesTesting  | EventInvoker.OnTargetSucceeded (-3.4028235E+38)

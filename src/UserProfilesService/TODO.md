@@ -26,9 +26,8 @@
   - `Email` (string)
   - `CreatedAt` (DateTime)
   - `Characters` (CharacterDocument[]?)
-- [ ] Add `UserId` field for Keycloak user reference
-- [ ] Add `UpdatedAt` field
-- [ ] Add `IsDeleted` flag for soft delete
+- [x] Add `UserId` field for Keycloak user reference
+- [x] Add `IsDeleted` flag for soft delete
 - [ ] Add validation tests for required fields
 
 ### 2.2. EF Core DbContext

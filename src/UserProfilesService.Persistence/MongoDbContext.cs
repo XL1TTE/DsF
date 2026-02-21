@@ -10,7 +10,7 @@ public class MongoDbContext: DbContext
 {
     public MongoDbContext(DbContextOptions<MongoDbContext> options): base(options){}
 
-    public DbSet<ProfileDocument> Documents {get; init;}
+    public DbSet<ProfileDocument> Profiles { get; init; }
     public DbSet<CharacterDocument> Characters {get; init;}
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

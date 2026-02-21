@@ -1,5 +1,12 @@
 
 namespace Loggers;
 
+/// <summary>
+/// Simple logger's group.
+/// </summary>
 public class ProfileEvents;
-public class UserAccountEvents;
+
+/// <summary>
+/// Simple logger's group.
+/// </summary>
+public class AccountEvents;
