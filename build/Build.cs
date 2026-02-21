@@ -12,7 +12,8 @@ using static Nuke.Common.Tools.DotNet.DotNetTasks;
     "profiles_service",
     GitHubActionsImage.UbuntuLatest,
     On = new[] { GitHubActionsTrigger.Push },
-    InvokedTargets = new[] { nameof(UserProfilesTesting) })]
+    InvokedTargets = new[] { nameof(UserProfilesTesting) },
+    AutoGenerate = false)]
 class Build : NukeBuild
 {
     public static int Main() => Execute<Build>(x => x.Test);
