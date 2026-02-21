@@ -18,6 +18,7 @@ public class CreateProfileHandler
         if (profileExist != null)
         {
             logger.LogInformation($"[{nameof(CreateProfileHandler)}] Profile for user: {command.userId} already exist.");
+            return;
         }
 
         var profile = new ProfileDocument
