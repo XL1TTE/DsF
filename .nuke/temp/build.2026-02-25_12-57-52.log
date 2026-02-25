@@ -4,31 +4,6 @@ V |                      | InjectParameterValues.OnBuildCreated (100)
 V |                      | HandleShellCompletion.OnBuildCreated (75)
 V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
 V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
-V |                      | Sending ConfigurationGenerated telemetry event ...
-V |                      |   build_components         = 
-V |                      |   build_type               = Project
-V |                      |   compile_time             = <null>
-V |                      |   config_generators        = GitHubActions
-V |                      |   generator_host           = GitHubActions
-V |                      |   generator_id             = e084d7
-V |                      |   host                     = VSCode
-V |                      |   num_custom_components    = 0
-V |                      |   num_custom_extensions    = 0
-V |                      |   num_partitioned_targets  = 0
-V |                      |   num_secrets              = 0
-V |                      |   num_targets              = 7
-V |                      |   os_architecture          = X64
-V |                      |   os_platform              = Windows
-V |                      |   repo_branch              = main
-V |                      |   repo_commit              = 5f3b0d
-V |                      |   repo_provider            = GitHub
-V |                      |   repo_url                 = ed8394
-V |                      |   target_framework         = .NETCoreApp,Version=v9.0
-V |                      |   version_dotnet_sdk       = 10.0.102
-V |                      |   version_nuke_common      = 9.0.4
-V |                      |   version_nuke_global_tool = <null>
-W |                      | Configuration files for GitHubActions (profiles_service) have changed.
-V |                      | Updated .github\workflows\profiles_service.yml
 V |                      | UpdateNotification.OnBuildCreated (10)
 V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
 V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
@@ -46,11 +21,11 @@ V |                      |   num_custom_components    = 0
 V |                      |   num_custom_extensions    = 0
 V |                      |   num_partitioned_targets  = 0
 V |                      |   num_secrets              = 0
-V |                      |   num_targets              = 7
+V |                      |   num_targets              = 9
 V |                      |   os_architecture          = X64
 V |                      |   os_platform              = Windows
 V |                      |   repo_branch              = main
-V |                      |   repo_commit              = 5f3b0d
+V |                      |   repo_commit              = 0bf9e4
 V |                      |   repo_provider            = GitHub
 V |                      |   repo_url                 = ed8394
 V |                      |   target_framework         = .NETCoreApp,Version=v9.0
@@ -63,11 +38,7 @@ V | Restore              | EventInvoker.OnTargetRunning (-3.4028235E+38)
 I | Restore              | > "C:\Program Files\dotnet\dotnet.exe" restore D:\dev\Code\Projects\DsF\dragonsforge.sln
 V | Restore              | @ D:\dev\Code\Projects\DsF
 D | Restore              |   Determining projects to restore...
-D | Restore              |   Restored d:\dev\Code\Projects\DsF\src\UserProfilesService.Contracts\UserProfilesService.Contracts.csproj (in 237 ms).
-D | Restore              |   Restored d:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\UserProfilesService.Persistence.csproj (in 425 ms).
-D | Restore              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService\UserProfilesService.csproj (in 482 ms).
-D | Restore              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\UserProfilesService.Testing.csproj (in 513 ms).
-D | Restore              |   2 of 6 projects are up-to-date for restore.
+D | Restore              |   All projects are up-to-date for restore.
 V | Restore              | Telemetry.OnTargetSucceeded (0)
 V | Restore              | Sending TargetSucceeded telemetry event ...
 V | Restore              |   build_components         = 
@@ -79,15 +50,15 @@ V | Restore              |   num_custom_components    = 0
 V | Restore              |   num_custom_extensions    = 0
 V | Restore              |   num_partitioned_targets  = 0
 V | Restore              |   num_secrets              = 0
-V | Restore              |   num_targets              = 7
+V | Restore              |   num_targets              = 9
 V | Restore              |   os_architecture          = X64
 V | Restore              |   os_platform              = Windows
 V | Restore              |   repo_branch              = main
-V | Restore              |   repo_commit              = 5f3b0d
+V | Restore              |   repo_commit              = 0bf9e4
 V | Restore              |   repo_provider            = GitHub
 V | Restore              |   repo_url                 = ed8394
 V | Restore              |   target_current_partition = 1
-V | Restore              |   target_duration          = 2
+V | Restore              |   target_duration          = 5
 V | Restore              |   target_framework         = .NETCoreApp,Version=v9.0
 V | Restore              |   target_name              = Restore
 V | Restore              |   target_total_partitions  = 1
@@ -99,23 +70,26 @@ V | Compile              | EventInvoker.OnTargetRunning (-3.4028235E+38)
 I | Compile              | > "C:\Program Files\dotnet\dotnet.exe" build D:\dev\Code\Projects\DsF\dragonsforge.sln --configuration Debug
 V | Compile              | @ D:\dev\Code\Projects\DsF
 D | Compile              |   Determining projects to restore...
-D | Compile              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService.Contracts\UserProfilesService.Contracts.csproj (in 178 ms).
-D | Compile              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\UserProfilesService.Persistence.csproj (in 378 ms).
-D | Compile              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService\UserProfilesService.csproj (in 443 ms).
-D | Compile              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\UserProfilesService.Testing.csproj (in 446 ms).
-D | Compile              |   2 of 6 projects are up-to-date for restore.
+D | Compile              |   All projects are up-to-date for restore.
 D | Compile              |   UserProfilesService.Contracts -> D:\dev\Code\Projects\DsF\src\UserProfilesService.Contracts\bin\Debug\net10.0\UserProfilesService.Contracts.dll
-D | Compile              |   AppHost.ServiceDefaults -> D:\dev\Code\Projects\DsF\src\AppHost.ServiceDefaults\bin\Debug\net10.0\AppHost.ServiceDefaults.dll
+D | Compile              |   ContentService.Contracts -> D:\dev\Code\Projects\DsF\src\ContentService.Contracts\bin\Debug\net10.0\ContentService.Contracts.dll
+D | Compile              |   Common.Utilities -> D:\dev\Code\Projects\DsF\src\Common.Utilities\bin\Debug\net10.0\Common.Utilities.dll
+D | Compile              |   Common.DataAccess -> D:\dev\Code\Projects\DsF\src\Common.DataAccess\bin\Debug\net10.0\Common.DataAccess.dll
 D | Compile              |   UserProfilesService.Persistence -> D:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\bin\Debug\net10.0\UserProfilesService.Persistence.dll
+D | Compile              |   AppHost.ServiceDefaults -> D:\dev\Code\Projects\DsF\src\AppHost.ServiceDefaults\bin\Debug\net10.0\AppHost.ServiceDefaults.dll
+D | Compile              |   ContentService.Persistence -> D:\dev\Code\Projects\DsF\src\ContentService.Persistence\bin\Debug\net10.0\ContentService.Persistence.dll
+D | Compile              |   Testing.Common -> D:\dev\Code\Projects\DsF\src\Testing\Common\bin\Debug\net10.0\Testing.Common.dll
+D | Compile              |   ContentService -> D:\dev\Code\Projects\DsF\src\ContentService\bin\Debug\net10.0\ContentService.dll
 D | Compile              |   UserProfilesService -> D:\dev\Code\Projects\DsF\src\UserProfilesService\bin\Debug\net10.0\UserProfilesService.dll
+D | Compile              |   Testing.ContentService -> D:\dev\Code\Projects\DsF\src\Testing\ContentService\bin\Debug\net10.0\Testing.ContentService.dll
 D | Compile              |   AppHost -> D:\dev\Code\Projects\DsF\src\AppHost\bin\Debug\net10.0\AppHost.dll
-D | Compile              |   UserProfilesService.Testing -> D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\bin\Debug\net10.0\UserProfilesService.Testing.dll
+D | Compile              |   Testing.UserProfilesService -> D:\dev\Code\Projects\DsF\src\Testing\UserProfilesService\bin\Debug\net10.0\Testing.UserProfilesService.dll
 D | Compile              | 
 D | Compile              | Build succeeded.
 D | Compile              |     0 Warning(s)
 D | Compile              |     0 Error(s)
 D | Compile              | 
-D | Compile              | Time Elapsed 00:00:04.35
+D | Compile              | Time Elapsed 00:00:03.82
 V | Compile              | Telemetry.OnTargetSucceeded (0)
 V | Compile              | Sending TargetSucceeded telemetry event ...
 V | Compile              |   build_components         = 
@@ -127,15 +101,15 @@ V | Compile              |   num_custom_components    = 0
 V | Compile              |   num_custom_extensions    = 0
 V | Compile              |   num_partitioned_targets  = 0
 V | Compile              |   num_secrets              = 0
-V | Compile              |   num_targets              = 7
+V | Compile              |   num_targets              = 9
 V | Compile              |   os_architecture          = X64
 V | Compile              |   os_platform              = Windows
 V | Compile              |   repo_branch              = main
-V | Compile              |   repo_commit              = 5f3b0d
+V | Compile              |   repo_commit              = 0bf9e4
 V | Compile              |   repo_provider            = GitHub
 V | Compile              |   repo_url                 = ed8394
 V | Compile              |   target_current_partition = 1
-V | Compile              |   target_duration          = 5
+V | Compile              |   target_duration          = 4
 V | Compile              |   target_framework         = .NETCoreApp,Version=v9.0
 V | Compile              |   target_name              = Compile
 V | Compile              |   target_total_partitions  = 1
@@ -143,15 +117,42 @@ V | Compile              |   version_dotnet_sdk       = 10.0.102
 V | Compile              |   version_nuke_common      = 9.0.4
 V | Compile              |   version_nuke_global_tool = <null>
 V | Compile              | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+V | CommonModulesTesting | EventInvoker.OnTargetRunning (-3.4028235E+38)
+I | CommonModulesTesting | > "C:\Program Files\dotnet\dotnet.exe" test D:\dev\Code\Projects\DsF\src\Testing\Common\Testing.Common.csproj --configuration Debug --no-build --no-restore --framework net10.0
+V | CommonModulesTesting | @ D:\dev\Code\Projects\DsF
+D | CommonModulesTesting | Test run for D:\dev\Code\Projects\DsF\src\Testing\Common\bin\Debug\net10.0\Testing.Common.dll (.NETCoreApp,Version=v10.0)
+D | CommonModulesTesting | VSTest version 18.0.1 (x64)
+D | CommonModulesTesting | 
+D | CommonModulesTesting | Starting test execution, please wait...
+D | CommonModulesTesting | A total of 1 test files matched the specified pattern.
+D | CommonModulesTesting | 
+D | CommonModulesTesting | Passed!  - Failed:     0, Passed:     7, Skipped:     0, Total:     7, Duration: 885 ms - Testing.Common.dll (net10.0)
+V | CommonModulesTesting | Telemetry.OnTargetSucceeded (0)
+V | CommonModulesTesting | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+V | ContentServiceTestin | EventInvoker.OnTargetRunning (-3.4028235E+38)
+I | ContentServiceTestin | > "C:\Program Files\dotnet\dotnet.exe" test D:\dev\Code\Projects\DsF\src\Testing\ContentService\Testing.ContentService.csproj --configuration Debug --no-build --no-restore --framework net10.0
+V | ContentServiceTestin | @ D:\dev\Code\Projects\DsF
+D | ContentServiceTestin | Test run for D:\dev\Code\Projects\DsF\src\Testing\ContentService\bin\Debug\net10.0\Testing.ContentService.dll (.NETCoreApp,Version=v10.0)
+D | ContentServiceTestin | VSTest version 18.0.1 (x64)
+D | ContentServiceTestin | 
+D | ContentServiceTestin | Starting test execution, please wait...
+D | ContentServiceTestin | A total of 1 test files matched the specified pattern.
+D | ContentServiceTestin | 
+D | ContentServiceTestin | Passed!  - Failed:     0, Passed:    12, Skipped:     0, Total:    12, Duration: 801 ms - Testing.ContentService.dll (net10.0)
+V | ContentServiceTestin | Telemetry.OnTargetSucceeded (0)
+V | ContentServiceTestin | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
 V | UserProfilesTesting  | EventInvoker.OnTargetRunning (-3.4028235E+38)
-I | UserProfilesTesting  | > "C:\Program Files\dotnet\dotnet.exe" test D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\UserProfilesService.Testing.csproj --configuration Debug --no-build --no-restore --framework net10.0
+I | UserProfilesTesting  | > "C:\Program Files\dotnet\dotnet.exe" test D:\dev\Code\Projects\DsF\src\Testing\UserProfilesService\Testing.UserProfilesService.csproj --configuration Debug --no-build --no-restore --framework net10.0
 V | UserProfilesTesting  | @ D:\dev\Code\Projects\DsF
-D | UserProfilesTesting  | Test run for D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\bin\Debug\net10.0\UserProfilesService.Testing.dll (.NETCoreApp,Version=v10.0)
+D | UserProfilesTesting  | Test run for D:\dev\Code\Projects\DsF\src\Testing\UserProfilesService\bin\Debug\net10.0\Testing.UserProfilesService.dll (.NETCoreApp,Version=v10.0)
 D | UserProfilesTesting  | VSTest version 18.0.1 (x64)
 D | UserProfilesTesting  | 
 D | UserProfilesTesting  | Starting test execution, please wait...
 D | UserProfilesTesting  | A total of 1 test files matched the specified pattern.
 D | UserProfilesTesting  | 
-D | UserProfilesTesting  | Passed!  - Failed:     0, Passed:     4, Skipped:     0, Total:     4, Duration: 5 s - UserProfilesService.Testing.dll (net10.0)
+D | UserProfilesTesting  | Passed!  - Failed:     0, Passed:     4, Skipped:     0, Total:     4, Duration: 6 s - Testing.UserProfilesService.dll (net10.0)
 V | UserProfilesTesting  | Telemetry.OnTargetSucceeded (0)
 V | UserProfilesTesting  | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+V |                      | UpdateNotification.OnBuildFinished (10)
+V |                      | SerializeBuildServerState.OnBuildFinished (0)
+V |                      | EventInvoker.OnBuildFinished (-3.4028235E+38)

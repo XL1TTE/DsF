@@ -8,7 +8,7 @@ namespace Documents;
 public sealed class ProfileDocument
 {
     [BsonId] public required string Id { get; init; }
-    [BsonElement] public required string AuthId { get; init; }
+    [BsonElement] public required string UserId { get; init; }
     [EmailAddress] public required string Email { get; set; }
     [BsonElement] public required string Username { get; set; }
     [BsonElement] public required DateTime CreatedAt { get; init; }

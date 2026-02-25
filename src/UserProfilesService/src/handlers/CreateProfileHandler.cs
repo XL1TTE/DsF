@@ -1,10 +1,7 @@
 using Commands;
-using Contracts;
 using Documents;
-using Events;
 using MongoDB.Bson;
 using Persistence;
-using Wolverine;
 using Wolverine.Attributes;
 
 namespace Handlers;
@@ -14,7 +11,7 @@ public class CreateProfileHandler
     [WolverineHandler]
     public async Task Consume(CreateProfile command, MongoDbContext db, ILogger<Loggers.ProfileEvents> logger)
     {
-        ProfileDocument? profileExist = db.Profiles.FirstOrDefault(x => x.AuthId == command.userId);
+        ProfileDocument? profileExist = db.Profiles.FirstOrDefault(x => x.UserId == command.userId);
         if (profileExist != null)
         {
             logger.LogInformation($"[{nameof(CreateProfileHandler)}] Profile for user: {command.userId} already exist.");
@@ -24,7 +21,7 @@ public class CreateProfileHandler
         var profile = new ProfileDocument
         {
             Id = Guid.NewGuid().ToString(),
-            AuthId = command.userId,
+            UserId = command.userId,
             Email = command.email,
             Username = command.username,
             CreatedAt = DateTime.UtcNow,

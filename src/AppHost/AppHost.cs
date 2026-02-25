@@ -9,12 +9,18 @@ var MessagingPassword = builder.AddParameter("messaging-password", builder.FromC
 var Auth = builder.AddKeycloak("auth-provider", port: 8080).WithDataVolume();
 var Messaging            = builder.AddRabbitMQ("messaging").WithManagementPlugin().WithDataVolume();
 var UsersDataBase        = builder.AddMongoDB("users-db");
+var ContentDataBase = builder.AddMongoDB("content-db");
 
 var UserProfileService = builder
                          .AddProject<UserProfilesService>("user-profiles")
                          .WithReference(UsersDataBase)
                          .WithReference(Auth)
                          .WithReference(Messaging)
+                         .WaitFor(UsersDataBase);
+
+var ContentService = builder
+                         .AddProject<ContentService>("content-service")
+                         .WithReference(ContentDataBase)
                          .WaitFor(UsersDataBase);
 
 var MessagingEndpoint = Messaging.GetEndpoint("tcp");

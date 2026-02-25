@@ -9,11 +9,15 @@ using static Nuke.Common.Tools.DotNet.DotNetTasks;
 
 [SuppressMessage("ReSharper", "AllUnderscoreLocalParameterName")]
 [GitHubActions(
-    "profiles_service",
+    "Testing",
     GitHubActionsImage.UbuntuLatest,
     On = new[] { GitHubActionsTrigger.Push },
-    InvokedTargets = new[] { nameof(UserProfilesTesting) },
-    AutoGenerate = false)]
+    InvokedTargets = new[] {
+        nameof(CommonModulesTesting),
+        nameof(ContentServiceTesting),
+        nameof(UserProfilesTesting),
+    },
+    AutoGenerate = true)]
 class Build : NukeBuild
 {
     public static int Main() => Execute<Build>(x => x.Test);
@@ -58,7 +62,7 @@ class Build : NukeBuild
                              {
                                  var process = ProcessTasks.StartProcess(
                                                                          "dotnet run --project",
-                                                                         Solution.src.AppHost.Path
+                                                                         Solution.AppHost.Path
                                                                         );
 
                                  Log.Information($"Aspire started (pid {process.Id})");
@@ -69,7 +73,7 @@ class Build : NukeBuild
                                        .Executes(() => { });
 
     Target Test => _ => _
-        .DependsOn(UserProfilesTesting);
+        .DependsOn(CommonModulesTesting, UserProfilesTesting, ContentServiceTesting);
 
     Target UserProfilesTesting => _ => _
         .DependsOn(Compile)
@@ -77,7 +81,31 @@ class Build : NukeBuild
         .Executes(() =>
         {
             DotNetTest(_ => _
-                .SetProjectFile(Solution.src.UserProfilesService_Testing)
+                .SetProjectFile(Solution.Testing.Testing_UserProfilesService)
+                .SetConfiguration(Configuration)
+                .EnableNoBuild()
+                .EnableNoRestore()
+                .SetFramework(Framework));
+        });
+    Target ContentServiceTesting => _ => _
+        .DependsOn(Compile)
+        .ProceedAfterFailure()
+        .Executes(() =>
+        {
+            DotNetTest(_ => _
+                .SetProjectFile(Solution.Testing.Testing_ContentService)
+                .SetConfiguration(Configuration)
+                .EnableNoBuild()
+                .EnableNoRestore()
+                .SetFramework(Framework));
+        });
+    Target CommonModulesTesting => _ => _
+        .DependsOn(Compile)
+        .ProceedAfterFailure()
+        .Executes(() =>
+        {
+            DotNetTest(_ => _
+                .SetProjectFile(Solution.Testing.Testing_Common)
                 .SetConfiguration(Configuration)
                 .EnableNoBuild()
                 .EnableNoRestore()

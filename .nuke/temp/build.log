@@ -1,157 +1,64 @@
-16:11:08.675 | V |                      | ArgumentsFromParametersFile.OnBuildCreated (150)
-16:11:08.707 | V |                      | HandleReSharperSurrogateArguments.OnBuildCreated (150)
-16:11:08.707 | V |                      | InjectParameterValues.OnBuildCreated (100)
-16:11:08.751 | V |                      | HandleShellCompletion.OnBuildCreated (75)
-16:11:09.313 | V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
-16:11:09.314 | V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
-16:11:12.314 | V |                      | Sending ConfigurationGenerated telemetry event ...
-16:11:12.317 | V |                      |   build_components         = 
-16:11:12.317 | V |                      |   build_type               = Project
-16:11:12.317 | V |                      |   compile_time             = <null>
-16:11:12.317 | V |                      |   config_generators        = GitHubActions
-16:11:12.318 | V |                      |   generator_host           = GitHubActions
-16:11:12.318 | V |                      |   generator_id             = e084d7
-16:11:12.318 | V |                      |   host                     = VSCode
-16:11:12.318 | V |                      |   num_custom_components    = 0
-16:11:12.318 | V |                      |   num_custom_extensions    = 0
-16:11:12.318 | V |                      |   num_partitioned_targets  = 0
-16:11:12.318 | V |                      |   num_secrets              = 0
-16:11:12.318 | V |                      |   num_targets              = 7
-16:11:12.318 | V |                      |   os_architecture          = X64
-16:11:12.318 | V |                      |   os_platform              = Windows
-16:11:12.318 | V |                      |   repo_branch              = main
-16:11:12.318 | V |                      |   repo_commit              = 5f3b0d
-16:11:12.318 | V |                      |   repo_provider            = GitHub
-16:11:12.318 | V |                      |   repo_url                 = ed8394
-16:11:12.318 | V |                      |   target_framework         = .NETCoreApp,Version=v9.0
-16:11:12.318 | V |                      |   version_dotnet_sdk       = 10.0.102
-16:11:12.318 | V |                      |   version_nuke_common      = 9.0.4
-16:11:12.318 | V |                      |   version_nuke_global_tool = <null>
-16:11:13.377 | W |                      | Configuration files for GitHubActions (profiles_service) have changed.
-16:11:13.389 | V |                      | Updated .github\workflows\profiles_service.yml
-16:11:53.343 | V |                      | UpdateNotification.OnBuildCreated (10)
-16:11:53.344 | V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
-16:11:53.344 | V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
-16:11:53.344 | V |                      | EventInvoker.OnBuildCreated (-3.4028235E+38)
-16:11:53.395 | V |                      | HandlePlanRequests.OnBuildInitialized (10)
-16:11:53.395 | V |                      | HandleHelpRequests.OnBuildInitialized (5)
-16:11:53.396 | V |                      | Telemetry.OnBuildInitialized (0)
-16:11:53.597 | V |                      | Sending BuildStarted telemetry event ...
-16:11:53.598 | V |                      |   build_components         = 
-16:11:53.598 | V |                      |   build_type               = Project
-16:11:53.598 | V |                      |   compile_time             = <null>
-16:11:53.598 | V |                      |   config_generators        = GitHubActions
-16:11:53.598 | V |                      |   host                     = VSCode
-16:11:53.598 | V |                      |   num_custom_components    = 0
-16:11:53.598 | V |                      |   num_custom_extensions    = 0
-16:11:53.598 | V |                      |   num_partitioned_targets  = 0
-16:11:53.598 | V |                      |   num_secrets              = 0
-16:11:53.598 | V |                      |   num_targets              = 7
-16:11:53.598 | V |                      |   os_architecture          = X64
-16:11:53.598 | V |                      |   os_platform              = Windows
-16:11:53.598 | V |                      |   repo_branch              = main
-16:11:53.598 | V |                      |   repo_commit              = 5f3b0d
-16:11:53.598 | V |                      |   repo_provider            = GitHub
-16:11:53.598 | V |                      |   repo_url                 = ed8394
-16:11:53.598 | V |                      |   target_framework         = .NETCoreApp,Version=v9.0
-16:11:53.598 | V |                      |   version_dotnet_sdk       = 10.0.102
-16:11:53.598 | V |                      |   version_nuke_common      = 9.0.4
-16:11:53.598 | V |                      |   version_nuke_global_tool = <null>
-16:11:53.719 | V |                      | InjectNonParameterValues.OnBuildInitialized (-100)
-16:11:53.755 | V |                      | EventInvoker.OnBuildInitialized (-3.4028235E+38)
-16:11:53.770 | V | Restore              | EventInvoker.OnTargetRunning (-3.4028235E+38)
-16:11:53.814 | I | Restore              | > "C:\Program Files\dotnet\dotnet.exe" restore D:\dev\Code\Projects\DsF\dragonsforge.sln
-16:11:53.816 | V | Restore              | @ D:\dev\Code\Projects\DsF
-16:11:54.690 | D | Restore              |   Determining projects to restore...
-16:11:55.796 | D | Restore              |   Restored d:\dev\Code\Projects\DsF\src\UserProfilesService.Contracts\UserProfilesService.Contracts.csproj (in 237 ms).
-16:11:55.968 | D | Restore              |   Restored d:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\UserProfilesService.Persistence.csproj (in 425 ms).
-16:11:56.037 | D | Restore              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService\UserProfilesService.csproj (in 482 ms).
-16:11:56.070 | D | Restore              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\UserProfilesService.Testing.csproj (in 513 ms).
-16:11:56.073 | D | Restore              |   2 of 6 projects are up-to-date for restore.
-16:11:56.114 | V | Restore              | Telemetry.OnTargetSucceeded (0)
-16:11:56.345 | V | Restore              | Sending TargetSucceeded telemetry event ...
-16:11:56.346 | V | Restore              |   build_components         = 
-16:11:56.346 | V | Restore              |   build_type               = Project
-16:11:56.346 | V | Restore              |   compile_time             = <null>
-16:11:56.346 | V | Restore              |   config_generators        = GitHubActions
-16:11:56.346 | V | Restore              |   host                     = VSCode
-16:11:56.346 | V | Restore              |   num_custom_components    = 0
-16:11:56.346 | V | Restore              |   num_custom_extensions    = 0
-16:11:56.346 | V | Restore              |   num_partitioned_targets  = 0
-16:11:56.346 | V | Restore              |   num_secrets              = 0
-16:11:56.346 | V | Restore              |   num_targets              = 7
-16:11:56.346 | V | Restore              |   os_architecture          = X64
-16:11:56.346 | V | Restore              |   os_platform              = Windows
-16:11:56.347 | V | Restore              |   repo_branch              = main
-16:11:56.347 | V | Restore              |   repo_commit              = 5f3b0d
-16:11:56.347 | V | Restore              |   repo_provider            = GitHub
-16:11:56.347 | V | Restore              |   repo_url                 = ed8394
-16:11:56.347 | V | Restore              |   target_current_partition = 1
-16:11:56.347 | V | Restore              |   target_duration          = 2
-16:11:56.347 | V | Restore              |   target_framework         = .NETCoreApp,Version=v9.0
-16:11:56.347 | V | Restore              |   target_name              = Restore
-16:11:56.347 | V | Restore              |   target_total_partitions  = 1
-16:11:56.347 | V | Restore              |   version_dotnet_sdk       = 10.0.102
-16:11:56.347 | V | Restore              |   version_nuke_common      = 9.0.4
-16:11:56.347 | V | Restore              |   version_nuke_global_tool = <null>
-16:11:56.473 | V | Restore              | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
-16:11:56.480 | V | Compile              | EventInvoker.OnTargetRunning (-3.4028235E+38)
-16:11:56.489 | I | Compile              | > "C:\Program Files\dotnet\dotnet.exe" build D:\dev\Code\Projects\DsF\dragonsforge.sln --configuration Debug
-16:11:56.492 | V | Compile              | @ D:\dev\Code\Projects\DsF
-16:11:57.470 | D | Compile              |   Determining projects to restore...
-16:11:58.392 | D | Compile              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService.Contracts\UserProfilesService.Contracts.csproj (in 178 ms).
-16:11:58.558 | D | Compile              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\UserProfilesService.Persistence.csproj (in 378 ms).
-16:11:58.637 | D | Compile              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService\UserProfilesService.csproj (in 443 ms).
-16:11:58.642 | D | Compile              |   Restored D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\UserProfilesService.Testing.csproj (in 446 ms).
-16:11:58.645 | D | Compile              |   2 of 6 projects are up-to-date for restore.
-16:11:59.008 | D | Compile              |   UserProfilesService.Contracts -> D:\dev\Code\Projects\DsF\src\UserProfilesService.Contracts\bin\Debug\net10.0\UserProfilesService.Contracts.dll
-16:11:59.190 | D | Compile              |   AppHost.ServiceDefaults -> D:\dev\Code\Projects\DsF\src\AppHost.ServiceDefaults\bin\Debug\net10.0\AppHost.ServiceDefaults.dll
-16:11:59.249 | D | Compile              |   UserProfilesService.Persistence -> D:\dev\Code\Projects\DsF\src\UserProfilesService.Persistence\bin\Debug\net10.0\UserProfilesService.Persistence.dll
-16:12:00.302 | D | Compile              |   UserProfilesService -> D:\dev\Code\Projects\DsF\src\UserProfilesService\bin\Debug\net10.0\UserProfilesService.dll
-16:12:00.861 | D | Compile              |   AppHost -> D:\dev\Code\Projects\DsF\src\AppHost\bin\Debug\net10.0\AppHost.dll
-16:12:01.149 | D | Compile              |   UserProfilesService.Testing -> D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\bin\Debug\net10.0\UserProfilesService.Testing.dll
-16:12:01.164 | D | Compile              | 
-16:12:01.165 | D | Compile              | Build succeeded.
-16:12:01.167 | D | Compile              |     0 Warning(s)
-16:12:01.168 | D | Compile              |     0 Error(s)
-16:12:01.170 | D | Compile              | 
-16:12:01.171 | D | Compile              | Time Elapsed 00:00:04.35
-16:12:01.209 | V | Compile              | Telemetry.OnTargetSucceeded (0)
-16:12:01.427 | V | Compile              | Sending TargetSucceeded telemetry event ...
-16:12:01.427 | V | Compile              |   build_components         = 
-16:12:01.427 | V | Compile              |   build_type               = Project
-16:12:01.427 | V | Compile              |   compile_time             = <null>
-16:12:01.427 | V | Compile              |   config_generators        = GitHubActions
-16:12:01.427 | V | Compile              |   host                     = VSCode
-16:12:01.427 | V | Compile              |   num_custom_components    = 0
-16:12:01.427 | V | Compile              |   num_custom_extensions    = 0
-16:12:01.427 | V | Compile              |   num_partitioned_targets  = 0
-16:12:01.427 | V | Compile              |   num_secrets              = 0
-16:12:01.427 | V | Compile              |   num_targets              = 7
-16:12:01.427 | V | Compile              |   os_architecture          = X64
-16:12:01.427 | V | Compile              |   os_platform              = Windows
-16:12:01.427 | V | Compile              |   repo_branch              = main
-16:12:01.427 | V | Compile              |   repo_commit              = 5f3b0d
-16:12:01.427 | V | Compile              |   repo_provider            = GitHub
-16:12:01.427 | V | Compile              |   repo_url                 = ed8394
-16:12:01.427 | V | Compile              |   target_current_partition = 1
-16:12:01.427 | V | Compile              |   target_duration          = 5
-16:12:01.428 | V | Compile              |   target_framework         = .NETCoreApp,Version=v9.0
-16:12:01.428 | V | Compile              |   target_name              = Compile
-16:12:01.428 | V | Compile              |   target_total_partitions  = 1
-16:12:01.428 | V | Compile              |   version_dotnet_sdk       = 10.0.102
-16:12:01.428 | V | Compile              |   version_nuke_common      = 9.0.4
-16:12:01.428 | V | Compile              |   version_nuke_global_tool = <null>
-16:12:01.563 | V | Compile              | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
-16:12:01.570 | V | UserProfilesTesting  | EventInvoker.OnTargetRunning (-3.4028235E+38)
-16:12:01.587 | I | UserProfilesTesting  | > "C:\Program Files\dotnet\dotnet.exe" test D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\UserProfilesService.Testing.csproj --configuration Debug --no-build --no-restore --framework net10.0
-16:12:01.589 | V | UserProfilesTesting  | @ D:\dev\Code\Projects\DsF
-16:12:02.545 | D | UserProfilesTesting  | Test run for D:\dev\Code\Projects\DsF\src\UserProfilesService.Testing\bin\Debug\net10.0\UserProfilesService.Testing.dll (.NETCoreApp,Version=v10.0)
-16:12:02.688 | D | UserProfilesTesting  | VSTest version 18.0.1 (x64)
-16:12:02.693 | D | UserProfilesTesting  | 
-16:12:02.845 | D | UserProfilesTesting  | Starting test execution, please wait...
-16:12:02.891 | D | UserProfilesTesting  | A total of 1 test files matched the specified pattern.
-16:12:18.359 | D | UserProfilesTesting  | 
-16:12:18.368 | D | UserProfilesTesting  | Passed!  - Failed:     0, Passed:     4, Skipped:     0, Total:     4, Duration: 5 s - UserProfilesService.Testing.dll (net10.0)
-16:12:18.447 | V | UserProfilesTesting  | Telemetry.OnTargetSucceeded (0)
-16:12:18.447 | V | UserProfilesTesting  | EventInvoker.OnTargetSucceeded (-3.4028235E+38)
+13:02:16.533 | V |                      | ArgumentsFromParametersFile.OnBuildCreated (150)
+13:02:16.562 | V |                      | HandleReSharperSurrogateArguments.OnBuildCreated (150)
+13:02:16.563 | V |                      | InjectParameterValues.OnBuildCreated (100)
+13:02:16.595 | V |                      | HandleShellCompletion.OnBuildCreated (75)
+13:02:17.019 | V |                      | GenerateBuildServerConfigurations.OnBuildCreated (50)
+13:02:17.020 | V |                      | InvokeBuildServerConfigurationGeneration.OnBuildCreated (45)
+13:02:18.650 | V |                      | Sending ConfigurationGenerated telemetry event ...
+13:02:18.652 | V |                      |   build_components         = 
+13:02:18.652 | V |                      |   build_type               = Project
+13:02:18.652 | V |                      |   compile_time             = 10
+13:02:18.654 | V |                      |   config_generators        = GitHubActions
+13:02:18.654 | V |                      |   generator_host           = GitHubActions
+13:02:18.654 | V |                      |   generator_id             = ea5c12
+13:02:18.654 | V |                      |   host                     = VSCode
+13:02:18.654 | V |                      |   num_custom_components    = 0
+13:02:18.654 | V |                      |   num_custom_extensions    = 0
+13:02:18.654 | V |                      |   num_partitioned_targets  = 0
+13:02:18.654 | V |                      |   num_secrets              = 0
+13:02:18.654 | V |                      |   num_targets              = 9
+13:02:18.654 | V |                      |   os_architecture          = X64
+13:02:18.654 | V |                      |   os_platform              = Windows
+13:02:18.654 | V |                      |   repo_branch              = main
+13:02:18.654 | V |                      |   repo_commit              = 0bf9e4
+13:02:18.654 | V |                      |   repo_provider            = GitHub
+13:02:18.654 | V |                      |   repo_url                 = ed8394
+13:02:18.654 | V |                      |   target_framework         = .NETCoreApp,Version=v9.0
+13:02:18.654 | V |                      |   version_dotnet_sdk       = 10.0.102
+13:02:18.654 | V |                      |   version_nuke_common      = 9.0.4
+13:02:18.654 | V |                      |   version_nuke_global_tool = 10.1.0
+13:02:19.787 | W |                      | Configuration files for GitHubActions (Testing) have changed.
+13:02:19.805 | V |                      | Updated .github\workflows\Testing.yml
+13:02:22.878 | V |                      | UpdateNotification.OnBuildCreated (10)
+13:02:22.878 | V |                      | UnsetVisualStudioEnvironmentVariables.OnBuildCreated (0)
+13:02:22.879 | V |                      | HandleVisualStudioDebugging.OnBuildCreated (0)
+13:02:22.879 | V |                      | EventInvoker.OnBuildCreated (-3.4028235E+38)
+13:02:22.903 | V |                      | HandlePlanRequests.OnBuildInitialized (10)
+13:02:22.903 | V |                      | HandleHelpRequests.OnBuildInitialized (5)
+13:02:22.903 | V |                      | Telemetry.OnBuildInitialized (0)
+13:02:23.114 | V |                      | Sending BuildStarted telemetry event ...
+13:02:23.114 | V |                      |   build_components         = 
+13:02:23.114 | V |                      |   build_type               = Project
+13:02:23.114 | V |                      |   compile_time             = 15
+13:02:23.114 | V |                      |   config_generators        = GitHubActions
+13:02:23.114 | V |                      |   host                     = VSCode
+13:02:23.114 | V |                      |   num_custom_components    = 0
+13:02:23.114 | V |                      |   num_custom_extensions    = 0
+13:02:23.114 | V |                      |   num_partitioned_targets  = 0
+13:02:23.114 | V |                      |   num_secrets              = 0
+13:02:23.114 | V |                      |   num_targets              = 9
+13:02:23.114 | V |                      |   os_architecture          = X64
+13:02:23.114 | V |                      |   os_platform              = Windows
+13:02:23.114 | V |                      |   repo_branch              = main
+13:02:23.114 | V |                      |   repo_commit              = 0bf9e4
+13:02:23.114 | V |                      |   repo_provider            = GitHub
+13:02:23.114 | V |                      |   repo_url                 = ed8394
+13:02:23.114 | V |                      |   target_framework         = .NETCoreApp,Version=v9.0
+13:02:23.114 | V |                      |   version_dotnet_sdk       = 10.0.102
+13:02:23.115 | V |                      |   version_nuke_common      = 9.0.4
+13:02:23.115 | V |                      |   version_nuke_global_tool = 10.1.0
+13:02:23.231 | V |                      | InjectNonParameterValues.OnBuildInitialized (-100)
+13:02:23.266 | V |                      | EventInvoker.OnBuildInitialized (-3.4028235E+38)
+13:02:23.288 | V | Restore              | EventInvoker.OnTargetRunning (-3.4028235E+38)
+13:02:23.343 | I | Restore              | > "C:\Program Files\dotnet\dotnet.exe" restore D:\dev\Code\Projects\DsF\dragonsforge.sln
+13:02:23.347 | V | Restore              | @ D:\dev\Code\Projects\DsF

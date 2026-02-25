@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.2" />
+    <PackageReference Include="Scalar.AspNetCore" Version="2.12.47" />
+    <PackageReference Include="WolverineFx" Version="5.16.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common.Utilities\Common.Utilities.csproj" />
+    <ProjectReference Include="..\ContentService.Contracts\ContentService.Contracts.csproj" />
+    <ProjectReference Include="..\ContentService.Persistence\ContentService.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

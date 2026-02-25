@@ -9,15 +9,18 @@ namespace Extensions;
 
 internal class KeycloakExtentions: IWolverineExtension
 {
-    public void Configure(WolverineOptions options)
-    {
-        options.Services.TryAddSingleton<AuthUri>();
+       public void Configure(WolverineOptions options)
+       {
+              options.Services.TryAddSingleton<AuthUri>();
 
-        options.ListenToRabbitQueue("Events.User.AccountRegistered")
-               .DefaultIncomingMessage<AccountRegistered>();
+              options.ListenToRabbitQueue("Events.User.AccountRegistered")
+                     .DefaultIncomingMessage<AccountRegistered>();
 
-        options.ListenToRabbitQueue("Events.User.AccountDeleted")
-               .DefaultIncomingMessage<AccountDeleted>();
-    }
+              options.ListenToRabbitQueue("Events.User.AccountDeleted")
+                     .DefaultIncomingMessage<AccountDeleted>();
+
+              options.ListenToRabbitQueue("Events.User.AccountUpdated")
+                            .DefaultIncomingMessage<UserUpdated>();
+       }
 }
 

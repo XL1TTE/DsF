@@ -9,12 +9,12 @@
 #
 #     - To trigger manual generation invoke:
 #
-#         nuke --generate-configuration GitHubActions_profiles_service --host GitHubActions
+#         nuke --generate-configuration GitHubActions_Testing --host GitHubActions
 #
 # </auto-generated>
 # ------------------------------------------------------------------------------
 
-name: profiles_service
+name: Testing
 
 on: [push]
 
@@ -31,5 +31,5 @@ jobs:
             .nuke/temp
             ~/.nuget/packages
           key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj', '**/Directory.Packages.props') }}
-      - name: 'Run: UserProfilesTesting'
-        run: chmod +x ./build.sh && ./build.sh UserProfilesTesting
+      - name: 'Run: CommonModulesTesting, ContentServiceTesting, UserProfilesTesting'
+        run: chmod +x ./build.sh && ./build.sh CommonModulesTesting ContentServiceTesting UserProfilesTesting

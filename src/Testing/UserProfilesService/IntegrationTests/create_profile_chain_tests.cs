@@ -73,9 +73,9 @@ public class create_profile_chain_tests(MongoDbFixture fixture) : IAsyncLifetime
         await _bus.InvokeAsync(@event);
 
         // Assert - Verify profile was created in MongoDB
-        var profile = await _context.Profiles.FirstOrDefaultAsync(p => p.AuthId == userId);
+        var profile = await _context.Profiles.FirstOrDefaultAsync(p => p.UserId == userId);
         profile.ShouldNotBeNull();
-        profile.AuthId.ShouldBe(userId);
+        profile.UserId.ShouldBe(userId);
         profile.Username.ShouldBe("testuser");
         profile.Email.ShouldBe("test@example.com");
         profile.IsDeleted.ShouldBeFalse();
@@ -90,7 +90,7 @@ public class create_profile_chain_tests(MongoDbFixture fixture) : IAsyncLifetime
         var existingProfile = new ProfileDocument
         {
             Id = Guid.NewGuid().ToString(),
-            AuthId = userId,
+            UserId = userId,
             Username = "existinguser",
             Email = "existing@example.com",
             CreatedAt = DateTime.UtcNow,
@@ -119,7 +119,7 @@ public class create_profile_chain_tests(MongoDbFixture fixture) : IAsyncLifetime
         await _bus.InvokeAsync(@event);
 
         // Assert - Verify no duplicate was created
-        var profiles = await _context.Profiles.Where(p => p.AuthId == userId).ToListAsync();
+        var profiles = await _context.Profiles.Where(p => p.UserId == userId).ToListAsync();
         profiles.Count.ShouldBe(1);
         var profile = profiles[0];
         profile.Username.ShouldBe("existinguser"); // Original profile unchanged
@@ -151,7 +151,7 @@ public class create_profile_chain_tests(MongoDbFixture fixture) : IAsyncLifetime
         await _bus.InvokeAsync(@event).ShouldThrowAsync<ArgumentException>();
 
         // Assert - Verify no profile was created
-        var profile = await _context.Profiles.FirstOrDefaultAsync(p => p.AuthId == userId);
+        var profile = await _context.Profiles.FirstOrDefaultAsync(p => p.UserId == userId);
         profile.ShouldBeNull();
     }
 
@@ -180,7 +180,7 @@ public class create_profile_chain_tests(MongoDbFixture fixture) : IAsyncLifetime
         await _bus.InvokeAsync(@event).ShouldThrowAsync<ArgumentException>();
 
         // Assert - Verify no profile was created
-        var profile = await _context.Profiles.FirstOrDefaultAsync(p => p.AuthId == userId);
+        var profile = await _context.Profiles.FirstOrDefaultAsync(p => p.UserId == userId);
         profile.ShouldBeNull();
     }
 }

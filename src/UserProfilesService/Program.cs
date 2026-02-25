@@ -1,6 +1,4 @@
 using Extensions;
-using Handlers;
-using Handlers.OnAccountCreated;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
@@ -45,6 +43,7 @@ builder.Services.AddWolverine(ExtensionDiscovery.ManualOnly, conf =>
 
 var authority = builder.Configuration.GetValue<string>("Identity:Authority");
 var clientId = builder.Configuration.GetValue<string>("Identity:ClientId");
+var audience = builder.Configuration.GetValue<string>("Identity:Audience");
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -55,10 +54,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         options.SaveToken = true;
         options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
         {
-            ValidateIssuer = true,
-            ValidateAudience = true,
+            ValidateIssuer = false,
+            ValidateAudience = false,
             ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
+            ValidateIssuerSigningKey = false,
             ValidIssuer = authority,
             ValidAudience = clientId
         };
@@ -66,9 +65,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 builder.Services.AddAuthorization();
 
-builder.Services.AddOpenApi(opt =>
+builder.Services.AddOpenApi(options =>
 {
-    // opt.AddDocumentTransformer<OauthDocumentTransformer>();
 });
 
 var app = builder.Build();
@@ -78,14 +76,20 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
     app.MapScalarApiReference("/docs", opt =>
     {
-        opt.AddPreferredSecuritySchemes("OAuth2");
-        opt.AddAuthorizationCodeFlow("OAuth2", flow =>
+        opt.AddPreferredSecuritySchemes("oauth2");
+        opt.AddAuthorizationCodeFlow("oauth2", flow =>
         {
             flow.ClientId = builder.Configuration.GetValue<string>("Identity:ClientId");
+            flow.ClientSecret = builder.Configuration.GetValue<string>("Identity:ClientSecret");
             flow.AuthorizationUrl = builder.Configuration.GetValue<string>("Identity:AuthEndpoint");
-            var audience = builder.Configuration.GetValue<string>("Identity:Audience");
-            flow.SelectedScopes = [$"{audience}/.default"];
+            flow.TokenUrl = builder.Configuration.GetValue<string>("Identity:TokenEndpoint");
             flow.RedirectUri = builder.Configuration.GetValue<string>("Identity:RedirectUri");
+            flow.Pkce = Pkce.Sha256;
+        });
+        opt.AddPasswordFlow("auth", flow =>
+        {
+            flow.TokenUrl = builder.Configuration.GetValue<string>("Identity:TokenEndpoint");
+            flow.ClientId = builder.Configuration.GetValue<string>("Identity:ClientId");
         });
     });
 }
@@ -93,6 +97,5 @@ if (app.Environment.IsDevelopment())
 app.MapControllers();
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseHttpsRedirection();
 
 app.Run();

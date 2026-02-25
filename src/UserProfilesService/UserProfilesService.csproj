@@ -11,7 +11,7 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.2" />
     <PackageReference Include="Microsoft.OpenApi" Version="2.0.0" />
     <PackageReference Include="Scalar.AspNetCore" Version="2.12.41" />
-    <PackageReference Include="WolverineFx" Version="5.16.0" />
+    <PackageReference Include="WolverineFx" Version="5.16.2" />
     <PackageReference Include="WolverineFx.RabbitMQ" Version="5.16.0" />
   </ItemGroup>
 
