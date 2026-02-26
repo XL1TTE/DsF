@@ -1,9 +1,12 @@
 namespace Common.DataAccess;
 
-public interface IUnitOfWork : IDisposable
+public interface IUnitOfWork
 {
-    IRepository<T> Repository<T>() where T: class, IDbEntity;
+    IRepository<T> Repository<T>() where T : class, IDbEntity;
     void Save();
     Task SaveAsync();
+    void BeginTransaction();
+    void CommitTransaction();
+    void RollbackTransaction();
 }
 

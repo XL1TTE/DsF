@@ -4,6 +4,8 @@
 
 QWEN.md
 
+.nuke/temp/*
+
 # User-specific files
 *.suo
 *.user

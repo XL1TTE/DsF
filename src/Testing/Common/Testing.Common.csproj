@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common.DataAccess\Common.DataAccess.csproj" />
-    <ProjectReference Include="..\..\ContentService.Persistence\ContentService.Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>

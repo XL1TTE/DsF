@@ -1,13 +1,10 @@
-
-using System.ComponentModel.DataAnnotations;
 using Commands;
-using ContentService.Contracts;
+using Contracts.Requests;
 using Microsoft.AspNetCore.Mvc;
 using Persistence.Documents;
 using Wolverine;
 
 namespace Controllers;
-
 
 [ApiController, Route("races/")]
 public class RacesController(IMessageBus bus): ControllerBase
@@ -15,8 +12,9 @@ public class RacesController(IMessageBus bus): ControllerBase
     [HttpGet("{name}")]
     [ProducesResponseType<RaceDocument>(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
-    public async Task<ActionResult> GetByName([FromQuery] string name)
+    public async Task<ActionResult> GetByName(string name, [FromQuery] string format = "application/json")
     {
+        Response.Headers.ContentType = format;
         return await bus.InvokeAsync<ActionResult>(new GetRaceBySlug(name));
     }
 
@@ -28,8 +26,9 @@ public class RacesController(IMessageBus bus): ControllerBase
     }
 
     [HttpPost("add")]
+    [Consumes("multipart/form-data")]
     [ProducesResponseType<RaceDocument>(StatusCodes.Status201Created)]
-    public async Task<ActionResult> AddNew([FromBody] CreateNewRaceRequest request)
+    public async Task<ActionResult> AddNew([FromForm] CreateRaceRequest request)
     {
         return await bus.InvokeAsync<ActionResult>(request);
     }

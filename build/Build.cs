@@ -17,7 +17,7 @@ using static Nuke.Common.Tools.DotNet.DotNetTasks;
         nameof(ContentServiceTesting),
         nameof(UserProfilesTesting),
     },
-    AutoGenerate = true)]
+    AutoGenerate = false)]
 class Build : NukeBuild
 {
     public static int Main() => Execute<Build>(x => x.Test);

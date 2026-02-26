@@ -3,11 +3,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Persistence;
 using Shouldly;
-using Testing.Fixtures;
 using Wolverine;
 using Events.User;
 using Contracts;
 using Documents;
+using Testing.Fixtures;
 
 namespace Testing.IntegrationTests;
 

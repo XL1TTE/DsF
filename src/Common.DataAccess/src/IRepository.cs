@@ -25,14 +25,14 @@ public interface IRepository<T> where T: class, IDbEntity
     /// <param name="id"></param>
     /// <returns>Entity.</returns>
     T? GetById(object id);
-    
+
     /// <summary>
     /// Inserts new record in database.
     /// </summary>
     /// <param name="entity"></param>
     /// <returns>Inserted entity.</returns>
-    T? Add(T entity);
-    
+    T Add(T entity);
+
     /// <summary>
     /// Deletes entity from database by id.
     /// </summary>

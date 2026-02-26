@@ -7,7 +7,7 @@ namespace Persistence.Repositories;
 
 public class RacesRepository(ContentDbContext context) : IRepository<RaceDocument>
 {
-    public RaceDocument? Add(RaceDocument entity)
+    public RaceDocument Add(RaceDocument entity)
     {
         var entry = context.Races.Add(entity);
         return entry.Entity;

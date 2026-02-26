@@ -4,19 +4,24 @@ using Persistence.Contexts;
 using Persistence.Documents;
 using Persistence.Repositories;
 using Shouldly;
+using Testing.ContentService.Fixtures;
 
 namespace Testing.ContentService;
 
 /// <summary>
 /// Integration tests for RacesRepository with InMemory database
 /// </summary>
+[Collection("RacesRepositoryTests")]
 public class RacesRepositoryTests : IAsyncLifetime
 {
     private readonly ContentDbContext _context;
     private readonly RacesRepository _repository;
+    private readonly RaceDocumentFixture _fixture;
 
-    public RacesRepositoryTests()
+    public RacesRepositoryTests(RaceDocumentFixture fixture)
     {
+        _fixture = fixture;
+
         var options = new DbContextOptionsBuilder<ContentDbContext>()
             .UseInMemoryDatabase($"RacesTest_{Guid.NewGuid()}")
             .Options;
@@ -33,19 +38,13 @@ public class RacesRepositoryTests : IAsyncLifetime
     public async Task DisposeAsync()
     {
         await _context.Database.EnsureDeletedAsync();
-        await _context.DisposeAsync();
     }
 
     [Fact]
     public void Add_WhenCalled_AddsEntityToDatabase()
     {
         // Arrange
-        var race = new RaceDocument
-        {
-            Slug = "test-race",
-            Name = "Test Race",
-            History = "Test History"
-        };
+        var race = _fixture.Create(slug: "test-race", name: "Test Race", history: "Test History");
 
         // Act
         var result = _repository.Add(race);
@@ -54,7 +53,7 @@ public class RacesRepositoryTests : IAsyncLifetime
         // Assert
         result.ShouldNotBeNull();
         result.Id.ShouldNotBeNullOrEmpty();
-        
+
         var saved = _context.Races.Find(result.Id);
         saved.ShouldNotBeNull();
         saved.Name.ShouldBe("Test Race");
@@ -65,22 +64,17 @@ public class RacesRepositoryTests : IAsyncLifetime
     public void update_when_called_updates_entity()
     {
         // Arrange
-        var race = new RaceDocument
-        {
-            Slug = "test-race",
-            Name = "Test Race",
-            History = "Test History"
-        };
+        var race = _fixture.Create(slug: "test-race", name: "Test Race", history: "Test History");
         _context.Races.Add(race);
         _context.SaveChanges();
 
         // Act - Get fresh entity from DB and update
         var existing = _context.Races.Find(race.Id);
         existing.ShouldNotBeNull();
-        
+
         existing.Name = "Updated Race";
         existing.History = "Updated History";
-        
+
         _repository.Update(existing);
         _context.SaveChanges();
 
@@ -96,21 +90,11 @@ public class RacesRepositoryTests : IAsyncLifetime
     public void add_when_duplicate_slug_throws_exception()
     {
         // Arrange
-        var race1 = new RaceDocument
-        {
-            Slug = "duplicate-slug",
-            Name = "Race 1",
-            History = "History 1"
-        };
+        var race1 = _fixture.Create(slug: "duplicate-slug", name: "Race 1", history: "History 1");
         _context.Races.Add(race1);
         _context.SaveChanges();
 
-        var race2 = new RaceDocument
-        {
-            Slug = "duplicate-slug", // Same slug as race1
-            Name = "Race 2",
-            History = "History 2"
-        };
+        var race2 = _fixture.Create(slug: "duplicate-slug", name: "Race 2", history: "History 2");
 
         // Act & Assert - InMemory DB throws InvalidOperationException for duplicate alternate keys
         Should.Throw<InvalidOperationException>(() =>
@@ -124,12 +108,7 @@ public class RacesRepositoryTests : IAsyncLifetime
     public void get_by_id_when_exists_returns_entity()
     {
         // Arrange
-        var race = new RaceDocument
-        {
-            Slug = "human",
-            Name = "Human",
-            History = "Versatile race"
-        };
+        var race = _fixture.Create(slug: "human", name: "Human", history: "Versatile race");
         _repository.Add(race);
         _context.SaveChanges();
 
@@ -156,12 +135,7 @@ public class RacesRepositoryTests : IAsyncLifetime
     public void delete_when_called_removes_entity()
     {
         // Arrange
-        var race = new RaceDocument
-        {
-            Slug = "orc",
-            Name = "Orc",
-            History = "Warrior race"
-        };
+        var race = _fixture.Create(slug: "orc", name: "Orc", history: "Warrior race");
         _repository.Add(race);
         _context.SaveChanges();
 
@@ -178,9 +152,9 @@ public class RacesRepositoryTests : IAsyncLifetime
     public void get_with_filter_returns_filtered_entities()
     {
         // Arrange
-        _repository.Add(new RaceDocument { Slug = "high-elf", Name = "High Elf", History = "Noble elves" });
-        _repository.Add(new RaceDocument { Slug = "wood-elf", Name = "Wood Elf", History = "Forest elves" });
-        _repository.Add(new RaceDocument { Slug = "dwarf", Name = "Dwarf", History = "Mountain dwellers" });
+        _repository.Add(_fixture.Create(slug: "high-elf", name: "High Elf", history: "Noble elves"));
+        _repository.Add(_fixture.Create(slug: "wood-elf", name: "Wood Elf", history: "Forest elves"));
+        _repository.Add(_fixture.Create(slug: "dwarf", name: "Dwarf", history: "Mountain dwellers"));
         _context.SaveChanges();
 
         // Act
@@ -195,10 +169,10 @@ public class RacesRepositoryTests : IAsyncLifetime
     public void get_all_with_pagination_returns_correct_page()
     {
         // Arrange
-        _repository.Add(new RaceDocument { Slug = "race-one", Name = "Race One", History = "First" });
-        _repository.Add(new RaceDocument { Slug = "race-two", Name = "Race Two", History = "Second" });
-        _repository.Add(new RaceDocument { Slug = "race-three", Name = "Race Three", History = "Third" });
-        _repository.Add(new RaceDocument { Slug = "race-four", Name = "Race Four", History = "Fourth" });
+        _repository.Add(_fixture.Create(slug: "race-one", name: "Race One", history: "First"));
+        _repository.Add(_fixture.Create(slug: "race-two", name: "Race Two", history: "Second"));
+        _repository.Add(_fixture.Create(slug: "race-three", name: "Race Three", history: "Third"));
+        _repository.Add(_fixture.Create(slug: "race-four", name: "Race Four", history: "Fourth"));
         _context.SaveChanges();
 
         // Act
